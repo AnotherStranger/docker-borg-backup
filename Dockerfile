@@ -1,6 +1,6 @@
 FROM debian:8
 
-ARG BORG_VERSION=0.29.0
+ENV BORG_VERSION=0.29.0
 
 RUN apt-get update && \
     apt-get install -y openssh-server python3-pip build-essential libssl-dev libssl1.0.0 liblz4-dev liblz4-1 libacl1-dev libacl1 && \
