@@ -20,4 +20,4 @@ fi
 chown -R borg.borg /home/borg
 chown -R borg.borg /home/borg/.ssh
 
-exec /usr/sbin/sshd -D
+exec /usr/sbin/sshd -D -d
