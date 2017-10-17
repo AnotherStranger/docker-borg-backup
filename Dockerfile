@@ -18,10 +18,14 @@ RUN set -x \
     && chown borg.borg /var/backups/borg \
     && mkdir /home/borg/.ssh \
     && chmod 700 /home/borg/.ssh \
-    && chown borg.borg /home/borg/.ssh \
+    && chown borg.borg /home/borg/.ssh
+
+RUN set -x \
     && sed -i \
         -e 's/^#PasswordAuthentication yes$/PasswordAuthentication no/g' \
         -e 's/^PermitRootLogin without-password$/PermitRootLogin no/g' \
+        -e 's/^X11Forwarding yes$/X11Forwarding no/g' \
+        -e 's/^#LogLevel .*$/LogLevel VERBOSE/g' \
         /etc/ssh/sshd_config
 
 VOLUME /var/backups/borg
