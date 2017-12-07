@@ -18,7 +18,8 @@ RUN set -x \
     && chown borg.borg /var/backups/borg \
     && mkdir /home/borg/.ssh \
     && chmod 700 /home/borg/.ssh \
-    && chown borg.borg /home/borg/.ssh
+    && chown borg.borg /home/borg/.ssh \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN set -x \
     && sed -i \
