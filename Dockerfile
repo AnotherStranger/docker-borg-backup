@@ -1,6 +1,6 @@
 FROM debian:9
 
-ENV BORG_VERSION=1.1.6
+ENV BORG_VERSION=1.1.7
 
 RUN set -x \
     && apt-get update \
