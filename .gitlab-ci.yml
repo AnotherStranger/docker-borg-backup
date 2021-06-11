@@ -1,0 +1,39 @@
+stages:
+  - build-image
+  - build-manifest
+
+variables:
+  FORCE: 0
+  MULTIARCH: 1
+
+.build-image-template: &build-image
+  stage: build-image
+  script:
+    - ./build.sh
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - version.txt
+      - results/
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+build-image-amd64:
+  <<: *build-image
+
+build-image-arm:
+  <<: *build-image
+  variables:
+    ARCH: arm
+
+build-image-arm64:
+  <<: *build-image
+  variables:
+    ARCH: arm64
+
+build-manifest:
+  stage: build-manifest
+  script:
+    - ./build-manifest.sh
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
