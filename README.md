@@ -1,6 +1,6 @@
 # docker-borg-backup
 
-A dockerized Borg Backup server. For more information about Borg Backup, an excellent deduplicating backup, refer to: https://www.borgbackup.org/
+A dockerized Borg Backup server. For more information about Borg Backup, an excellent de-duplicating backup, refer to: https://www.borgbackup.org/
 
 ## Usage
 
@@ -14,10 +14,10 @@ Alternatively, use the Docker orchestrator of your choice.
 
 ## License
 
-The files contained in this Git repository are licensed under the following license. This license explicitly does not cover the Borg Backup and Debian software packaged when running the Docker build. For these componensts, separate licenses apply that you can find at:
+The files contained in this Git repository are licensed under the following license. This license explicitly does not cover the Borg Backup and Ubuntu software packaged when running the Docker build. For these components, separate licenses apply that you can find at:
 
 * https://borgbackup.readthedocs.io/en/stable/authors.html#license
-* https://www.debian.org/legal/licenses/
+* https://ubuntu.com/licensing
 
 Copyright 2018-2021 TG Byte Software GmbH
 
