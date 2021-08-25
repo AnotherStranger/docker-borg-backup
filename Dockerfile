@@ -1,13 +1,10 @@
-FROM debian:10
+FROM ubuntu:20.04
 
 ARG BORG_VERSION
 
 RUN set -x \
     && apt-get update \
-    && apt-get install -y curl \
-    && sed -i "s/httpredir.debian.org/`curl -s -D - http://httpredir.debian.org/demo/debian/ | awk '/^Link:/ { print $2 }' | sed -e 's@<http://\(.*\)/debian/>;@\1@g'`/" /etc/apt/sources.list \
-    && apt-get update \
-    && apt-get install -y openssh-server python3-pip build-essential libssl-dev libssl1.1 liblz4-dev liblz4-1 libacl1-dev libacl1 \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-server python3-pip build-essential libssl-dev libssl1.1 liblz4-dev liblz4-1 libacl1-dev libacl1 \
     && rm -f /etc/ssh/ssh_host_* \
     && pip3 install "borgbackup==${BORG_VERSION}" \
     && apt-get remove -y --purge build-essential libssl-dev liblz4-dev libacl1-dev \
