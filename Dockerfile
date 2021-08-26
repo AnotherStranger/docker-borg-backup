@@ -3,11 +3,26 @@ FROM ubuntu:20.04
 ARG BORG_VERSION
 
 RUN set -x \
-    && apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-server python3-pip build-essential libssl-dev libssl1.1 liblz4-dev liblz4-1 libacl1-dev libacl1 \
+    && apt-get update -qq \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -qq -y \
+        build-essential \
+        libacl1 \
+        libacl1-dev \
+        liblz4-1 \
+        liblz4-dev \
+        libssl1.1 \
+        libssl-dev \
+        openssh-server \
+        python3 \
+        python3-pip \
+        python3-setuptools \
     && rm -f /etc/ssh/ssh_host_* \
-    && pip3 install "borgbackup==${BORG_VERSION}" \
-    && apt-get remove -y --purge build-essential libssl-dev liblz4-dev libacl1-dev \
+    && pip3 install -v "borgbackup==${BORG_VERSION}" \
+    && apt-get remove -y --purge \
+        build-essential \
+        libacl1-dev \
+        liblz4-dev \
+        libssl-dev \
     && apt-get autoremove -y --purge \
     && adduser --uid 500 --disabled-password --gecos "Borg Backup" --quiet borg \
     && mkdir /var/run/sshd \
