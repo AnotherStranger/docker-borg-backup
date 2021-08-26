@@ -46,8 +46,7 @@ trivy:
     name: aquasec/trivy
     entrypoint: [""]
   script:
-    - ls -alR
-    - ${CI_PROJECT_DIR}/bin/trivy.sh
+    - bin/trivy.sh
   allow_failure: true
   artifacts:
     expire_in: 1 day
