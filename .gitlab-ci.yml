@@ -78,3 +78,9 @@ build-manifest:
   needs:
     - job: version
       artifacts: true
+    - job: build-image-amd64
+      artifacts: true
+    - job: build-image-arm
+      artifacts: true
+    - job: build-image-arm64
+      artifacts: true
