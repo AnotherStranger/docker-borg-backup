@@ -1,13 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e -o pipefail
 
-BORG_VERSION=$(./borg-version.sh)
-echo "${BORG_VERSION}" > version.txt
-
+BORG_VERSION=$(cat .version)
 IMAGE_VERSION="${BORG_VERSION}"
-
-export ARG_BORG_VERSION="${BORG_VERSION}"
 export TAG="${IMAGE_VERSION}"
 
 if [ "$FORCE" != "1" ]; then
@@ -15,6 +11,7 @@ if [ "$FORCE" != "1" ]; then
   check-tag.sh "tgbyte/borg-backup:${IMAGE_VERSION}" && exit 0
 fi
 
-echo Building version "${BORG_VERSION}"
+echo Building manifest for version "${BORG_VERSION}"
 
-build-image.sh
+build-manifest.sh
+TAG=latest build-manifest.sh

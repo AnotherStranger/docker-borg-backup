@@ -1,6 +1,16 @@
+cache:
+  paths:
+    - .trivy/
+
 stages:
+  - version
+  - scan
   - build-image
   - build-manifest
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 variables:
   FORCE: 0
@@ -9,14 +19,44 @@ variables:
 .build-image-template: &build-image
   stage: build-image
   script:
-    - ./build.sh
+    - bin/build.sh
   artifacts:
     expire_in: 1 day
     paths:
-      - version.txt
+      - .version
       - results/
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  needs:
+    - job: version
+      artifacts: true
+    - job: trivy
+      artifacts: true
+
+version:
+  stage: version
+  script:
+    - bin/borg-version.sh > .version
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - .version
+
+trivy:
+  stage: scan
+  image:
+    name: aquasec/trivy
+    entrypoint: [""]
+  script:
+    - ls -alR
+    - ${CI_PROJECT_DIR}/bin/trivy.sh
+  allow_failure: true
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - .trivy-vulnerable
+    when: always
+  needs:
+    - job: version
+      artifacts: true
 
 build-image-amd64:
   <<: *build-image
@@ -34,6 +74,7 @@ build-image-arm64:
 build-manifest:
   stage: build-manifest
   script:
-    - ./build-manifest.sh
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - bin/build-manifest.sh
+  needs:
+    - job: version
+      artifacts: true
