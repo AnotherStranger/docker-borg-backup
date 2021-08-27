@@ -16,6 +16,7 @@ RUN set -x \
         python3 \
         python3-pip \
         python3-setuptools \
+        python3-setuptools-scm \
     && rm -f /etc/ssh/ssh_host_* \
     && pip3 install -v "borgbackup==${BORG_VERSION}" \
     && apt-get remove -y --purge \
