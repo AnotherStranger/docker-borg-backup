@@ -26,12 +26,9 @@ RUN set -x \
         libssl-dev \
     && apt-get autoremove -y --purge \
     && adduser --uid 500 --disabled-password --gecos "Borg Backup" --quiet borg \
-    && mkdir /var/run/sshd \
-    && mkdir /var/backups/borg \
-    && chown borg.borg /var/backups/borg \
-    && mkdir /home/borg/.ssh \
+    && mkdir -p /var/run/sshd /var/backups/borg /var/lib/docker-borg/ssh mkdir /home/borg/.ssh \
+    && chown borg.borg /var/backups/borg /home/borg/.ssh \
     && chmod 700 /home/borg/.ssh \
-    && chown borg.borg /home/borg/.ssh \
     && rm -rf /var/lib/apt/lists/*
 
 RUN set -x \
@@ -42,7 +39,7 @@ RUN set -x \
         -e 's/^#LogLevel .*$/LogLevel ERROR/g' \
         /etc/ssh/sshd_config
 
-VOLUME /var/backups/borg
+VOLUME ["/var/backups/borg", "/var/lib/docker-borg"]
 
 ADD ./entrypoint.sh /
 
