@@ -27,9 +27,7 @@ variables:
       - results/
   needs:
     - job: version
-      artifacts: true
     - job: trivy
-      artifacts: true
 
 version:
   stage: version
@@ -55,7 +53,6 @@ trivy:
     when: always
   needs:
     - job: version
-      artifacts: true
 
 build-image-amd64:
   <<: *build-image
@@ -76,12 +73,7 @@ build-manifest:
     - bin/build-manifest.sh
   needs:
     - job: version
-      artifacts: true
     - job: trivy
-      artifacts: true
     - job: build-image-amd64
-      artifacts: true
     - job: build-image-arm
-      artifacts: true
     - job: build-image-arm64
-      artifacts: true
