@@ -1,79 +1,8 @@
-cache:
-  paths:
-    - .trivy/
-
-stages:
-  - version
-  - scan
-  - build-image
-  - build-manifest
-
-workflow:
-  rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+include:
+  - project: 'docker/builder'
+    file: '/templates/.gitlab-ci.yml'
 
 variables:
-  FORCE: 0
+  BUILD_IMAGE_SCRIPT: .gitlab-ci/build-image.sh
+  BUILD_MANIFEST_SCRIPT: .gitlab-ci/build-manifest.sh
   MULTIARCH: 1
-
-.build-image-template: &build-image
-  stage: build-image
-  script:
-    - bin/build.sh
-  artifacts:
-    expire_in: 1 day
-    paths:
-      - .version
-      - results/
-  needs:
-    - job: version
-    - job: trivy
-
-version:
-  stage: version
-  script:
-    - bin/borg-version.sh > .version
-  artifacts:
-    expire_in: 1 day
-    paths:
-      - .version
-
-trivy:
-  stage: scan
-  image:
-    name: aquasec/trivy
-    entrypoint: [""]
-  script:
-    - bin/trivy.sh
-  allow_failure: true
-  artifacts:
-    expire_in: 1 day
-    paths:
-      - .trivy-vulnerable
-    when: always
-  needs:
-    - job: version
-
-build-image-amd64:
-  <<: *build-image
-
-build-image-arm:
-  <<: *build-image
-  variables:
-    ARCH: arm
-
-build-image-arm64:
-  <<: *build-image
-  variables:
-    ARCH: arm64
-
-build-manifest:
-  stage: build-manifest
-  script:
-    - bin/build-manifest.sh
-  needs:
-    - job: version
-    - job: trivy
-    - job: build-image-amd64
-    - job: build-image-arm
-    - job: build-image-arm64

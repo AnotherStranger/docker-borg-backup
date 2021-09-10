@@ -13,6 +13,10 @@ Alternatively, use the Docker orchestrator of your choice.
 **Caution:** Do NOT forget to mount a volume as `/var/backups/borg` to host the backups. Otherwise your backups will vanish into thin air when you update the Borg container.
 
 To persist the container's SSH host keys across container updates, mount a volume to `/var/lib/docker-borg`.
+
+## Supported Architectures
+
+This image is available for the `amd64` and `arm64` architectures.
 ## License
 
 The files contained in this Git repository are licensed under the following license. This license explicitly does not cover the Borg Backup and Ubuntu software packaged when running the Docker build. For these components, separate licenses apply that you can find at:
