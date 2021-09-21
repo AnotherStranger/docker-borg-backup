@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM tgbyte/ubuntu:20.04
 
 ARG BORG_VERSION
 
