@@ -24,7 +24,7 @@ The files contained in this Git repository are licensed under the following lice
 * https://borgbackup.readthedocs.io/en/stable/authors.html#license
 * https://ubuntu.com/licensing
 
-Copyright 2018-2021 TG Byte Software GmbH
+Copyright 2018-2022 TG Byte Software GmbH
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
