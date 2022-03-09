@@ -15,6 +15,7 @@ RUN set -x \
         openssh-server \
         python3 \
         python3-pip \
+        python3-pkgconfig \
         python3-setuptools \
         python3-setuptools-scm \
     && rm -f /etc/ssh/ssh_host_* \
