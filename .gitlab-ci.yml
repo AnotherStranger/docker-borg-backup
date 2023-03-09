@@ -1,8 +1,0 @@
-include:
-  - project: 'docker/builder'
-    file: '/templates/.gitlab-ci.yml'
-
-variables:
-  BUILD_IMAGE_SCRIPT: .gitlab-ci/build-image.sh
-  BUILD_MANIFEST_SCRIPT: .gitlab-ci/build-manifest.sh
-  MULTIARCH: 1
