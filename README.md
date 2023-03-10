@@ -16,7 +16,7 @@ docker run \
 Alternatively, use the Docker orchestrator of your choice.
 
 **Caution:** Do NOT forget to mount a volume as `/home/borg/backups/` to host
-the backups. Otherwise your backups will vanish into thin air when you update
+the backups. Otherwise, your backups will vanish into thin air when you update
 the Borg container.
 
 To persist the container's SSH host keys across container updates, mount a
@@ -24,7 +24,8 @@ volume to `/var/lib/docker-borg`.
 
 ## Supported Architectures
 
-This image is available for the `amd64` and `arm64` architectures.
+This image is available for the `amd64`, `arm64`, `ppc64le`, and `s390x`
+architectures.
 
 ## License
 
