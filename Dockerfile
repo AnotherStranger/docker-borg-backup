@@ -1,5 +1,10 @@
 FROM fedora:37
 
+ENV BORG_SERVE_ADDITIONAL_ARGS=""
+ENV BORG_UID=""
+ENV BORG_GID=""
+ENV BORG_AUTHORIZED_KEYS=""
+
 # hadolint ignore=DL3041
 RUN set -x \
     && dnf --refresh install -y borgbackup openssh-server \
@@ -22,6 +27,7 @@ RUN set -x \
 VOLUME ["/home/borg/backups/", "/var/lib/docker-borg"]
 
 COPY ./entrypoint.sh /
+
 
 EXPOSE 22
 CMD ["/entrypoint.sh"]
