@@ -10,7 +10,7 @@ docker run \
         -e BORG_AUTHORIZED_KEYS=<ssh_authorized_key> \
         -e BORG_UID=<uid> \
         -e BORG_GID=<gid> \
-        -v <borg_volume>:/var/backups/borg tgbyte/borg-backup
+        -v <borg_volume>:/var/backups/borg horaceworblehat/borg-server
 ```
 
 Alternatively, use the Docker orchestrator of your choice.
