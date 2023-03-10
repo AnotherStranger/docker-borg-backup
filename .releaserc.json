@@ -1,4 +1,5 @@
 {
+    "repositoryUrl" : "https://github.com/AnotherStranger/docker-borg-backup.git",
     "branches": [
       "main",
       {
