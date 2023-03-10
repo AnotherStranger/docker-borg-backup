@@ -74,4 +74,3 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: horaceworblehat/borg-server:latest
           short-description: ${{ github.event.repository.description }}
-          name: Update repo description
