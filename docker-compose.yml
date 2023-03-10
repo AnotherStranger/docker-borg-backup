@@ -5,8 +5,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+
+    image: horaceworblehat/borg-server
     environment:
-      BORG_AUTHORIZED_KEYS: ""
+      # Specify you public ssh keys here. Separate keys by adding \n
+      BORG_AUTHORIZED_KEYS: "<key_one>\n<key_two>"
     volumes:
       - backup:/home/borg/backups
       - server_keys:/var/lib/docker-borg
