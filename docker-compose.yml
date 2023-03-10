@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  borg:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      BORG_AUTHORIZED_KEYS: ""
+    volumes:
+      - backup:/home/borg/backups
+      - server_keys:/var/lib/docker-borg
+    ports:
+      - "8022:22"
+
+volumes:
+  backup:
+  server_keys:
