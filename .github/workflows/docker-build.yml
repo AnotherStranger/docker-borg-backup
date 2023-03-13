@@ -65,3 +65,5 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/arm64,linux/amd64,linux/ppc64le,linux/s390x
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
