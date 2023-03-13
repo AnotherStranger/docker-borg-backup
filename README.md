@@ -27,6 +27,17 @@ volume to `/var/lib/docker-borg`.
 This image is available for the `amd64`, `arm64`, `ppc64le`, and `s390x`
 architectures.
 
+## Environment variables
+
+<!-- markdownlint-disable -->
+| Variable                    | Description                            | Example                |
+|-----------------------------|----------------------------------------|------------------------|
+| `BORG_AUTHORIZED_KEYS`      | Public ssh keys for backups. Required. | `<key-one>\n<key-two>` |
+| `BORG_UID`                  | UID for the backup user.               | `1000`                 |
+| `BORG_GID`                  | GID for the backup user.               | `1000`                 |
+| `BORG_SERVE_ADDITIONAL_ARGS`| Additional CMD args to borg serve      | `--append-only`        |
+<!-- markdownlint-enable -->
+
 ## License
 
 The files contained in this Git repository are licensed under the following
