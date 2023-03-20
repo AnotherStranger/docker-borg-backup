@@ -1,8 +1,12 @@
-FROM fedora:37
+FROM alpine:3
 
 # Pin package Versions
-ARG BORGBACKUP_VERSION="1.2.3"
-ARG OPENSSH_VERSION="8.8p1"
+ARG BORGBACKUP_VERSION="1.2.2-r1"
+ARG OPENSSH_VERSION="9.1_p1-r2"
+ARG SED_VERSION="4.9-r0"
+ARG BASH_VERSION="5.2.15-r0"
+ARG SHADOW_VERSION="4.13-r0"
+ARG OPENSSL_VERSION="3.0.8-r0"
 
 # Add author and github link to image metadata
 LABEL org.opencontainers.image.authors="André Büsgen <andre.buesgen@posteo.de>"
@@ -14,14 +18,13 @@ ENV BORG_GID=""
 ENV BORG_AUTHORIZED_KEYS=""
 
 RUN set -x \
-    && dnf --refresh install -y borgbackup-"${BORGBACKUP_VERSION}" openssh-server-"${OPENSSH_VERSION}" \
-    && dnf clean all \
-    && useradd --system --uid 500 -m borg \
+    && apk add --no-cache borgbackup="${BORGBACKUP_VERSION}" openssh-server="${OPENSSH_VERSION}" sed="${SED_VERSION}" bash="${BASH_VERSION}" shadow="${SHADOW_VERSION}" openssl="${OPENSSL_VERSION}"\
+    && adduser -D -u 500 borg borg  \
     && mkdir -p /var/run/sshd /var/backups/borg /var/lib/docker-borg/ssh \
     && mkdir /home/borg/.ssh \
-    && chown borg:borg /var/backups/borg /home/borg/.ssh \
-    && chmod 700 /home/borg/.ssh \
-    && rm -rf /var/lib/apt/lists/*
+    && chown borg:borg /home/borg/.ssh \
+    && chmod 700 /home/borg/.ssh
+
 
 RUN set -x \
     && sed -i \
