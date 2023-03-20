@@ -2,8 +2,8 @@ name: trivy-scan
 
 on:
  workflow_run:
-    workflows: ["docker-build"]
-    branches: [main, dev]
+    workflows:
+      - docker-build
     types:
       - completed
 
