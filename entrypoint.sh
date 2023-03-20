@@ -5,11 +5,15 @@ echo "Environment:"
 echo "   BORG_UID                   = ${BORG_UID}"
 echo "   BORG_GID                   = ${BORG_GID}"
 echo "   BORG_SERVE_ADDITIONAL_ARGS = ${BORG_SERVE_ADDITIONAL_ARGS}"
-echo "   BORG_AUTHORIZED_KEYS       = ${BORG_AUTHORIZED_KEYS}"
 echo ""
 
 mkdir -p /var/lib/docker-borg/ssh >/dev/null 2>&1
 mkdir -p /home/borg/backups
+
+# Create a random password each startup, as only ssh-key auth is allowed
+BORG_PASSWORD=$(openssl passwd -5 "$(openssl rand -base64 128)")
+usermod -p "$BORG_PASSWORD" borg > /dev/null
+usermod -U borg > /dev/null
 
 if [ ! -f /var/lib/docker-borg/ssh/ssh_host_rsa_key ]; then
     echo "Creating SSH keys. To persist keys across container updates, mount a volume to /var/lib/docker-borg..."
@@ -20,12 +24,12 @@ fi
 ln -sf /var/lib/docker-borg/ssh/* /etc/ssh >/dev/null 2>&1
 
 if [ -n "${BORG_UID}" ]; then
-    usermod -u "${BORG_UID}" borg
+    usermod -u "${BORG_UID}" borg > /dev/null
 fi
 
 if [ -n "${BORG_GID}" ]; then
     groupmod -o -g "${BORG_GID}" borg
-    usermod -g "${BORG_GID}" borg
+    usermod -g "${BORG_GID}" borg > /dev/null
 fi
 
 if [ -n "${BORG_AUTHORIZED_KEYS+x}" ]; then
