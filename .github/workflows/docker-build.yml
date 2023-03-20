@@ -77,7 +77,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.event.pull_request.head.sha }}"
+          image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.event.workflow_run.head_sha }}"
           format: "template"
           template: "@/contrib/sarif.tpl"
           output: "trivy-results.sarif"
