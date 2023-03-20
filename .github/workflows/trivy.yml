@@ -1,13 +1,11 @@
 name: trivy-scan
 
 on:
-  push:
-    branches: ["main", dev]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: ["main"]
-  schedule:
-    - cron: "39 19 * * 5"
+ workflow_run:
+    workflows: ["docker-build"]
+    branches: [main, dev]
+    types:
+      - completed
 
 permissions:
   contents: read
