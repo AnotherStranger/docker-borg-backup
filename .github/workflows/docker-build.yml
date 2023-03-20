@@ -76,8 +76,9 @@ jobs:
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
+        if: ${{ github.event_name != 'pull_request' }}
         with:
-          image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.event.pull_request.head.sha | github.event.workflow_run.head.sha }}"
+          image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}"
           format: "template"
           template: "@/contrib/sarif.tpl"
           output: "trivy-results.sarif"
@@ -85,5 +86,6 @@ jobs:
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
+        if: ${{ github.event_name != 'pull_request' }}
         with:
           sarif_file: "trivy-results.sarif"
