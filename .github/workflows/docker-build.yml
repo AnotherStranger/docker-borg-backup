@@ -33,7 +33,7 @@ jobs:
             ghcr.io/AnotherStranger/borg-server
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=schedule
+            type=schedule,value=latest
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
