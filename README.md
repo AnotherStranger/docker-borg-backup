@@ -6,7 +6,7 @@ excellent de-duplicating backup, refer to: <https://www.borgbackup.org/>
 ## Usage
 
 **TL;DR**: pull the docker image from docker hub or ghcr, set the ssh-key
-variable, and mount volumes to `/home/borg/backups`and
+variable `BORG_AUTHORIZED_KEYS`, and mount volumes to `/home/borg/backups` and
 `/var/lib/docker-borg`.
 
 ### Docker run
