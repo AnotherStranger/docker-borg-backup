@@ -70,6 +70,10 @@ ARG LINUX_HEADERS_VERSION
 # Add author and github link to image metadata
 LABEL org.opencontainers.image.authors="André Büsgen <andre.buesgen@posteo.de>"
 LABEL org.opencontainers.image.source="https://github.com/AnotherStranger/docker-borg-backup"
+LABEL org.opencontainers.image.url="https://github.com/AnotherStranger/docker-borg-backup"
+LABEL org.opencontainers.image.documentation="https://github.com/AnotherStranger/docker-borg-backup"
+LABEL org.opencontainers.image.description="A dockerized borgbackup server"
+LABEL org.opencontainers.image.title="borg-server"
 
 # Define supported Environment variables
 ENV BORG_SERVE_ADDITIONAL_ARGS=""
