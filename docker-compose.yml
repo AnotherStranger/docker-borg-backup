@@ -5,21 +5,19 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: borg
 
-    image: horaceworblehat/borg-server
+    #image: horaceworblehat/borg-server
     environment:
       # Specify you public ssh keys here. Separate keys by adding \n
-      BORG_AUTHORIZED_KEYS: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM7/8kuSuApH3ABTZxrSgOhjVqByfosFw7BtIWTFgW6N andre@andre-work\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOvM7aEEYbgjlakMkJd6pziDGpz1BpN1uGpiEX4+gw2w buesgen@fh-aachen.de\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCUgn8KhUK031Ac1O88U/ZpEam2++lW7trRM4CpiV3/ZBOY7/zdHaElsb1/2h5gOaczlTKsMznpecbQNDVEf7ik0L1f2M/TLSuaXrOoSB7m2Tw2wHDfVZe/go+HJxAHTu5ppmluOrzIMf6frgeybtCpZsx9DRIpirPEgx7xJOa3Up0Av0AqbfwgPabHXIKXFPYSJTp5hNMZICru1mK6FiXtYduhyK8MCAHqXxTu8/d6qeQOPPC7h4+fOZy29KGZmOg2M4hNbaWl6vb/Gh4seufM61cPlKn588Kp7CZ2XbxioN0CwzuYInWKRgXJjuY/ZvxM5+ODvCiQjbwEu9e+v+iz cardno:0005 00006960"
-      BORG_SERVE_ADDITIONAL_ARGS: "--storage-quota 900G"
+      BORG_AUTHORIZED_KEYS: "key_one\nkey_two"
+      BORG_SERVE_ADDITIONAL_ARGS: "--storage-quota 900G --append-only"
       BORG_UID: "1000"
       BORG_GID: "1000"
     volumes:
       - backup:/home/borg/backups
       - server_keys:/var/lib/docker-borg
     ports:
-      - "10022:22"
-    privileged: true
+      - "8022:22"
 
 volumes:
   backup:
