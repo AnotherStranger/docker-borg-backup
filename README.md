@@ -5,15 +5,60 @@ excellent de-duplicating backup, refer to: <https://www.borgbackup.org/>
 
 ## Usage
 
+**TL;DR**: pull the docker image from docker hub or ghcr, set the ssh-key
+variable `BORG_AUTHORIZED_KEYS`, and mount volumes to `/home/borg/backups` and
+`/var/lib/docker-borg`. Once the container is up and running you can start
+creating backups with following Repo url:
+`ssh://borg@<host or ip>:<port>/./backups/<your_repo>`
+
+### Docker run
+
 ```bash
 docker run \
         -e BORG_AUTHORIZED_KEYS=<ssh_authorized_key> \
         -e BORG_UID=<uid> \
         -e BORG_GID=<gid> \
-        -v <borg_volume>:/var/backups/borg horaceworblehat/borg-server
+        -v <borg_volume>:/home/borg/backups horaceworblehat/borg-server
 ```
 
-Alternatively, use the Docker orchestrator of your choice.
+### Docker compose
+<!-- markdownlint-disable -->
+```yaml
+version: '3'
+
+services:
+  borg:
+    image: horaceworblehat/borg-server
+    environment:
+      # Specify you public ssh keys here. Separate keys by adding \n
+      BORG_AUTHORIZED_KEYS: "key_one\nkey_two"
+      BORG_SERVE_ADDITIONAL_ARGS: "--storage-quota 900G --append-only"
+      BORG_UID: "1000" # optional: your user id (run id in bash)
+      BORG_GID: "1000" # optional: your group id (run id in bash)
+    volumes:
+      - backup:/home/borg/backups # You can find your backups inside this volume
+      - server_keys:/var/lib/docker-borg # This volume is used to persist the hosts ssh-keys across updates
+    ports:
+      - "8022:22"
+
+volumes:
+  backup:
+  server_keys:
+```
+<!-- markdownlint-enable -->
+
+### Environment variables
+
+<!-- markdownlint-disable -->
+| Variable                    | Description                            | Example                |
+|-----------------------------|----------------------------------------|------------------------|
+| `BORG_AUTHORIZED_KEYS`      | Public ssh keys for backups. Required. | `<key-one>\n<key-two>` |
+| `BORG_UID`                  | UID for the backup user.               | `1000`                 |
+| `BORG_GID`                  | GID for the backup user.               | `1000`                 |
+| `BORG_SERVE_ADDITIONAL_ARGS`| Additional CMD args to borg serve      | `--append-only`        |
+<!-- markdownlint-enable -->
+
+### Important Notes
 
 **Caution:** Do NOT forget to mount a volume as `/home/borg/backups/` to host
 the backups. Otherwise, your backups will vanish into thin air when you update
@@ -24,19 +69,8 @@ volume to `/var/lib/docker-borg`.
 
 ## Supported Architectures
 
-This image is available for the `amd64`, `arm64`, `ppc64le`, and `s390x`
-architectures.
-
-## Environment variables
-
-<!-- markdownlint-disable -->
-| Variable                    | Description                            | Example                |
-|-----------------------------|----------------------------------------|------------------------|
-| `BORG_AUTHORIZED_KEYS`      | Public ssh keys for backups. Required. | `<key-one>\n<key-two>` |
-| `BORG_UID`                  | UID for the backup user.               | `1000`                 |
-| `BORG_GID`                  | GID for the backup user.               | `1000`                 |
-| `BORG_SERVE_ADDITIONAL_ARGS`| Additional CMD args to borg serve      | `--append-only`        |
-<!-- markdownlint-enable -->
+This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
+`linux/arm64/v8`, `linux/ppc64le`, and `linux/s390x` architectures.
 
 ## License
 
