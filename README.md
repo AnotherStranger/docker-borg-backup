@@ -7,7 +7,9 @@ excellent de-duplicating backup, refer to: <https://www.borgbackup.org/>
 
 **TL;DR**: pull the docker image from docker hub or ghcr, set the ssh-key
 variable `BORG_AUTHORIZED_KEYS`, and mount volumes to `/home/borg/backups` and
-`/var/lib/docker-borg`.
+`/var/lib/docker-borg`. Once the container is up and running you can start
+creating backups with following Repo url:
+`ssh://borg@<host or ip>:<port>/./backups/<your_repo>`
 
 ### Docker run
 
