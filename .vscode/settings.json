@@ -1,5 +1,5 @@
 {
     "conventionalCommits.scopes": [
-        "docker"
+        "docs"
     ]
 }
