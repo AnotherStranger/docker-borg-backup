@@ -58,7 +58,7 @@ echo "   BORG_GID                   = ${BORG_GID}"
 echo "   BORG_SERVE_ADDITIONAL_ARGS = ${BORG_SERVE_ADDITIONAL_ARGS}"
 echo "Borg Version: $(borg --version)"
 echo "Following borg repos are present:"
-ls -Al /home/borg/backups
+du -sh /home/borg/backups/*
 echo "Size of all backups combined: $(du -sh /home/borg/backups)"
 
 
