@@ -1,5 +1,9 @@
 {
     "conventionalCommits.scopes": [
-        "docker-compose"
+        "docker-compose",
+        "ci",
+        "borg",
+        "logging",
+        "docker"
     ]
 }
