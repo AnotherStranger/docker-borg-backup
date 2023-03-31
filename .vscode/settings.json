@@ -4,6 +4,7 @@
         "ci",
         "borg",
         "logging",
-        "docker"
+        "docker",
+        "docs"
     ]
 }
