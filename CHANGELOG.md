@@ -1,11 +1,11 @@
-## [1.9.1-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.1-rc.2...v1.9.1-rc.3) (2023-04-11)
+## [1.9.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.0...v1.9.1) (2023-03-31)
 
 
 ### Bug Fixes
 
-* **ci:** :bug: list refactorings in changelog ([de202e6](https://github.com/AnotherStranger/docker-borg-backup/commit/de202e68d13e96410257a5a39aedc8e590ecf50f))
+* **ci:** :adhesive_bandage: ignore generated CHANGElOG.md in pre-commit ([e548e13](https://github.com/AnotherStranger/docker-borg-backup/commit/e548e13eb590aefc356306bacbc574ba2aa29c04))
+* **ci:** :adhesive_bandage: remove duplicate definition of releasenotes-generator ([dc0ada8](https://github.com/AnotherStranger/docker-borg-backup/commit/dc0ada894e808a17c61661444abd4b3f30461a38))
 
-## [1.9.1-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.1-rc.1...v1.9.1-rc.2) (2023-04-11)
 
 ## [1.9.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.0...v1.9.1-rc.1) (2023-03-31)
 
