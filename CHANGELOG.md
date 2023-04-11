@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.1...v1.9.2) (2023-04-11)
+
+
+### Bug Fixes
+
+* **ci:** :bug: list refactorings in changelog ([de202e6](https://github.com/AnotherStranger/docker-borg-backup/commit/de202e68d13e96410257a5a39aedc8e590ecf50f))
+
 ## [1.9.2-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.1...v1.9.2-rc.1) (2023-04-11)
 
 
