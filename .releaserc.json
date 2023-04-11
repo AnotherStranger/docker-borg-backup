@@ -64,7 +64,9 @@
           },
           {
             "type": "refactor",
-            "release": "patch"
+            "release": "patch",
+            "section": "Other Changes",
+            "hidden": false
           },
           {
             "type": "style",
