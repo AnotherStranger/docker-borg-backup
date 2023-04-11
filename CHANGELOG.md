@@ -1,3 +1,5 @@
+## [1.9.1-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.1-rc.1...v1.9.1-rc.2) (2023-04-11)
+
 ## [1.9.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.0...v1.9.1-rc.1) (2023-03-31)
 
 
