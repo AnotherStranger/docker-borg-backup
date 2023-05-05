@@ -78,7 +78,6 @@ LABEL org.opencontainers.image.title="borg-server"
 ENV BORG_SERVE_ADDITIONAL_ARGS=""
 ENV BORG_UID=""
 ENV BORG_GID=""
-ENV BORG_AUTHORIZED_KEYS=""
 
 RUN set -x && \
     apk add --no-cache \
@@ -112,7 +111,7 @@ RUN set -x \
 && mkdir -p /var/lib/docker-borg/ssh \
 && mkdir -p /home/borg/backups
 
-VOLUME ["/home/borg/backups/", "/var/lib/docker-borg"]
+VOLUME ["/home/borg/backups/", "/var/lib/docker-borg", "/home/borg/.ssh/authorized_keys"]
 
 COPY ./entrypoint.sh /
 

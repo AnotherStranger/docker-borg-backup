@@ -16,6 +16,7 @@ services:
     volumes:
       - backup:/home/borg/backups
       - server_keys:/var/lib/docker-borg
+      # - <path to authorized_keys file>:/home/borg/.ssh/authorized_keys <- Alternative to BORG_AUTHORIZED_KEYS
     ports:
       - "8022:22"
 

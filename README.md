@@ -38,6 +38,7 @@ services:
     volumes:
       - backup:/home/borg/backups # You can find your backups inside this volume
       - server_keys:/var/lib/docker-borg # This volume is used to persist the hosts ssh-keys across updates
+      # - <path to authorized_keys file>:/home/borg/.ssh/authorized_keys <- Alternative to BORG_AUTHORIZED_KEYS
     ports:
       - "8022:22"
 
@@ -47,15 +48,24 @@ volumes:
 ```
 <!-- markdownlint-enable -->
 
+### Volumes
+
+<!-- markdownlint-disable -->
+| Path                              | Description                                                                              |
+| --------------------------------- | ---------------------------------------------------------------------------------------- |
+| `/home/borg/backups`              | All backups will be in this volume                                                       |
+| `/var/lib/docker-borg`            | This volume persists the hosts ssh-keys across updates                                   |
+| `/home/borg/.ssh/authorized_keys` | As an alternative to the variable `BORG_AUTHORIZED_KEYS` you can mount the file directly |
+<!-- markdownlint-enable -->
 ### Environment variables
 
 <!-- markdownlint-disable -->
-| Variable                    | Description                            | Example                |
-|-----------------------------|----------------------------------------|------------------------|
-| `BORG_AUTHORIZED_KEYS`      | Public ssh keys for backups. Required. | `<key-one>\n<key-two>` |
-| `BORG_UID`                  | UID for the backup user.               | `1000`                 |
-| `BORG_GID`                  | GID for the backup user.               | `1000`                 |
-| `BORG_SERVE_ADDITIONAL_ARGS`| Additional CMD args to borg serve      | `--append-only`        |
+| Variable                     | Description                            | Example                |
+| ---------------------------- | -------------------------------------- | ---------------------- |
+| `BORG_AUTHORIZED_KEYS`       | Public ssh keys for backups. Required. | `<key-one>\n<key-two>` |
+| `BORG_UID`                   | UID for the backup user.               | `1000`                 |
+| `BORG_GID`                   | GID for the backup user.               | `1000`                 |
+| `BORG_SERVE_ADDITIONAL_ARGS` | Additional CMD args to borg serve      | `--append-only`        |
 <!-- markdownlint-enable -->
 
 ### Important Notes
