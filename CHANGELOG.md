@@ -1,3 +1,17 @@
+# [1.10.0](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.3...v1.10.0) (2023-05-17)
+
+
+### Features
+
+* **docker:** :arrow_up: Update python baseimage to python 3.11 ([936dd6f](https://github.com/AnotherStranger/docker-borg-backup/commit/936dd6fe55234456814f3b73773b13db53e64122))
+
+# [1.10.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.3...v1.10.0-rc.1) (2023-05-16)
+
+
+### Features
+
+* **docker:** :arrow_up: Update python baseimage to python 3.11 ([936dd6f](https://github.com/AnotherStranger/docker-borg-backup/commit/936dd6fe55234456814f3b73773b13db53e64122))
+
 ## [1.9.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.2...v1.9.3) (2023-05-05)
 
 ## [1.9.3-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.2...v1.9.3-rc.1) (2023-05-03)
