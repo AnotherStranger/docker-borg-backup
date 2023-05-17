@@ -2,25 +2,25 @@
 #                             PIN PACKAGE VERSIONS                             #
 ################################################################################
 ARG BORGBACKUP_VERSION="1.2.4"
-ARG PYTHON_VERSION="3.10"
-ARG OPENSSH_VERSION="9.1_p1-r2"
-ARG SED_VERSION="4.9-r0"
-ARG BASH_VERSION="5.2.15-r0"
-ARG SHADOW_VERSION="4.13-r0"
-ARG OPENSSL_VERSION="3.0.8-r4"
-ARG PKG_CONF_VERSION="1.9.4-r0"
-ARG GCC_VERSION="12.2.1_git20220924-r4"
-ARG MUSL_VERSION="1.2.3-r4"
-ARG ACL_VERSION="2.3.1-r1"
-ARG XXHASH_VERSION="0.8.1-r0"
-ARG ZSTD_VERSION="1.5.5-r0"
-ARG LZ4_VERSION="1.9.4-r1"
-ARG LINUX_HEADERS_VERSION="5.19.5-r0"
+ARG PYTHON_VERSION="3.11"
+ARG OPENSSH_VERSION="9.3_p1-r3"
+ARG SED_VERSION="4.9-r2"
+ARG BASH_VERSION="5.2.15-r3"
+ARG SHADOW_VERSION="4.13-r2"
+ARG OPENSSL_VERSION="3.1.0-r4"
+ARG PKG_CONF_VERSION="1.9.5-r0"
+ARG GCC_VERSION="12.2.1_git20220924-r10"
+ARG MUSL_VERSION="1.2.4-r0"
+ARG ACL_VERSION="2.3.1-r3"
+ARG XXHASH_VERSION="0.8.1-r4"
+ARG ZSTD_VERSION="1.5.5-r4"
+ARG LZ4_VERSION="1.9.4-r4"
+ARG LINUX_HEADERS_VERSION="6.3-r0"
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
 ################################################################################
-FROM python:"${PYTHON_VERSION}"-alpine as builder
+FROM python:"${PYTHON_VERSION}"-alpine AS builder
 
 # Re-define needed ARGS
 ARG BORGBACKUP_VERSION
@@ -52,7 +52,7 @@ RUN set -x && \
 ################################################################################
 #                INSTALL BUILT BORGBACKUP PACKAGE IN NEW STAGE                 #
 ################################################################################
-FROM python:"${PYTHON_VERSION}"-alpine as runtime-image
+FROM python:"${PYTHON_VERSION}"-alpine AS runtime-image
 
 # Re-define needed ARGS
 ARG OPENSSH_VERSION
