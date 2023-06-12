@@ -1,3 +1,22 @@
+## [1.10.1-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.1-rc.1...v1.10.1-rc.2) (2023-06-12)
+
+
+### Bug Fixes
+
+* :bug: add missing package in release ([9af1937](https://github.com/AnotherStranger/docker-borg-backup/commit/9af1937e3af250dcd2f38fc7b3732f7d399f4f67))
+
+## [1.10.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.0...v1.10.1-rc.1) (2023-06-12)
+
+
+### Bug Fixes
+
+* **ci:** :bug: Disable build cache to force base image pull ([672e4f4](https://github.com/AnotherStranger/docker-borg-backup/commit/672e4f49b1845d4e56e1f4314d1a2315026f6ede))
+
+
+### Reverts
+
+* Revert "fix(ci): :bug: Disable build cache to force base image pull" ([6a6f0bf](https://github.com/AnotherStranger/docker-borg-backup/commit/6a6f0bf9ada405f3b8b09f7494144190d7e4160f))
+
 # [1.10.0](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.9.3...v1.10.0) (2023-05-17)
 
 
