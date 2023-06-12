@@ -1,3 +1,10 @@
+## [1.10.1-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.1-rc.1...v1.10.1-rc.2) (2023-06-12)
+
+
+### Bug Fixes
+
+* :bug: add missing package in release ([9af1937](https://github.com/AnotherStranger/docker-borg-backup/commit/9af1937e3af250dcd2f38fc7b3732f7d399f4f67))
+
 ## [1.10.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.0...v1.10.1-rc.1) (2023-06-12)
 
 
