@@ -1,3 +1,18 @@
+## [1.10.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.1...v1.10.2) (2023-06-14)
+
+
+### Code Refactoring
+
+* :recycle: add presetConfig for release-notes-generator ([cf96bec](https://github.com/AnotherStranger/docker-borg-backup/commit/cf96bece002266fd842f94ee167ee12789c65445))
+
+
+### Build System
+
+* **release:** 1.10.1-rc.3 ([710a926](https://github.com/AnotherStranger/docker-borg-backup/commit/710a926a89cfef2d787fbfefc7c60094ececa7e8))
+* **release:** 1.10.2-rc.1 ([70dc96a](https://github.com/AnotherStranger/docker-borg-backup/commit/70dc96a77a1f5738bee53cc43fb9e52e1af2a642))
+* Merge branch 'dev' of https://github.com/AnotherStranger/docker-borg-backup into dev ([6ff9cba](https://github.com/AnotherStranger/docker-borg-backup/commit/6ff9cba7a7dbbe3fbd39a6f36f3985a965f2d1b4))
+* Merge branch 'main' into dev ([50b1442](https://github.com/AnotherStranger/docker-borg-backup/commit/50b1442a641f4945091fbce43f8876a84f36a857))
+
 ## [1.10.2-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.1...v1.10.2-rc.1) (2023-06-12)
 
 
