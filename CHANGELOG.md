@@ -1,3 +1,15 @@
+## [1.10.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.2...v1.10.3) (2023-06-19)
+
+
+### Build System
+
+* **release:** 1.10.3-rc.1 ([df3e4f6](https://github.com/AnotherStranger/docker-borg-backup/commit/df3e4f6d8d7557f85795fa80248690b3fe855bf4))
+
+
+### Code Refactoring
+
+* **docker:** :arrow_up: update shadow version ([5047252](https://github.com/AnotherStranger/docker-borg-backup/commit/504725267eeeb7f2aec5c5e419cec8a83e05f991))
+
 ## [1.10.3-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.2...v1.10.3-rc.1) (2023-06-19)
 
 
