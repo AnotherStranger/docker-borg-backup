@@ -1,2 +1,4 @@
 .trivy*
 .version
+.idea/
+.vscode/

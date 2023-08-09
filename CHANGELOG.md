@@ -1,3 +1,10 @@
+## [1.10.4-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.3...v1.10.4-rc.1) (2023-08-09)
+
+
+### Code Refactoring
+
+* **docker:** :arrow_up: upgrade docker image dependencies ([5ac6c00](https://github.com/AnotherStranger/docker-borg-backup/commit/5ac6c00d1284f52f43d1900f62eb6fb5321f07bf))
+
 ## [1.10.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.2...v1.10.3) (2023-06-19)
 
 
