@@ -1,3 +1,10 @@
+## [2.0.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2023-09-14)
+
+
+### Code Refactoring
+
+* **docker:** :arrow_up: Update borg to 1.2.6 ([ff579e1](https://github.com/AnotherStranger/docker-borg-backup/commit/ff579e1b681031c4e30684242e60bfb9f645112c))
+
 ## [2.0.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.4...v2.0.0-rc.1) (2023-08-31)
 
 
