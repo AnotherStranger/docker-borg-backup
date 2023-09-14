@@ -1,3 +1,25 @@
+## [2.0.0](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.4...v2.0.0) (2023-09-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **borg:** While this is a server only image I will mark this release as BREAKING CHANGE. See  https://github.com/borgbackup/borg/blob/1.2.5-cvedocs/docs/changes.rst#pre-125-archives-spoofing-vulnerability-cve-2023-36811 for a HOWTO upgrade.
+
+### Build System
+
+* **release:** 2.0.0-rc.1 ([a3c5f4c](https://github.com/AnotherStranger/docker-borg-backup/commit/a3c5f4c24bbd1c389cb6a223c813f42e3c35410a)), closes [/github.com/borgbackup/borg/blob/1.2.5-cvedocs/docs/changes.rst#pre-125-archives-spoofing-vulnerability-cve-2023-36811](https://github.com/AnotherStranger//github.com/borgbackup/borg/blob/1.2.5-cvedocs/docs/changes.rst/issues/pre-125-archives-spoofing-vulnerability-cve-2023-36811)
+* **release:** 2.0.0-rc.2 ([ac3e417](https://github.com/AnotherStranger/docker-borg-backup/commit/ac3e4172cbcf97abed85d7aacfb0737e90b5954f))
+
+
+### Bug Fixes
+
+* **borg:** :arrow_up: Update borg to version 1.2.5. See Notes! ([6a50042](https://github.com/AnotherStranger/docker-borg-backup/commit/6a500420d282f1f957da2a5187f15f6236a15a33))
+
+
+### Code Refactoring
+
+* **docker:** :arrow_up: Update borg to 1.2.6 ([ff579e1](https://github.com/AnotherStranger/docker-borg-backup/commit/ff579e1b681031c4e30684242e60bfb9f645112c))
+
 ## [2.0.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.0.0-rc.1...v2.0.0-rc.2) (2023-09-14)
 
 
