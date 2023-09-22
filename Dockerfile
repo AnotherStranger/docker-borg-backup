@@ -111,7 +111,7 @@ RUN set -x \
 && mkdir -p /var/lib/docker-borg/ssh \
 && mkdir -p /home/borg/backups
 
-VOLUME ["/home/borg/backups/", "/var/lib/docker-borg", "/home/borg/.ssh/authorized_keys"]
+VOLUME ["/home/borg/backups/", "/var/lib/docker-borg", "/home/borg/.ssh/"]
 
 COPY ./entrypoint.sh /
 
