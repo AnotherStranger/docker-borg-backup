@@ -1,3 +1,10 @@
+## [2.1.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0-rc.1...v2.1.0-rc.2) (2023-09-22)
+
+
+### Bug Fixes
+
+* :bug: fix wrong volume declaration ([c1f59a9](https://github.com/AnotherStranger/docker-borg-backup/commit/c1f59a94bfe6720fa0a404cdf209036585c079e8))
+
 ## [2.1.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.0.0...v2.1.0-rc.1) (2023-09-22)
 
 
