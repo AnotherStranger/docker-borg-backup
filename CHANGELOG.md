@@ -1,3 +1,36 @@
+## [2.1.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0-rc.1...v2.1.0-rc.2) (2023-09-22)
+
+
+### Bug Fixes
+
+* :bug: fix wrong volume declaration ([c1f59a9](https://github.com/AnotherStranger/docker-borg-backup/commit/c1f59a94bfe6720fa0a404cdf209036585c079e8))
+
+## [2.1.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.0.0...v2.1.0-rc.1) (2023-09-22)
+
+
+### Build System
+
+* :twisted_rightwards_arrows: Merge branch 'main' into feature/alternative-pubkey-management ([07efe6e](https://github.com/AnotherStranger/docker-borg-backup/commit/07efe6e13091ffc415a9109ca25db0a1efb58ffe))
+* :twisted_rightwards_arrows: Merge branch 'main' into feature/alternative-pubkey-management ([b63d026](https://github.com/AnotherStranger/docker-borg-backup/commit/b63d026e3d7b88e2b30fa4628464cf926264bce9))
+* :twisted_rightwards_arrows: Merge remote-tracking branch 'origin/dev' into feature/alternative-pubkey-management ([ec529f7](https://github.com/AnotherStranger/docker-borg-backup/commit/ec529f7f6c63eb37b7de57876f699df7f6bbf7c6))
+* Merge remote-tracking branch 'origin/main' into feature/alternative-pubkey-management ([0a18526](https://github.com/AnotherStranger/docker-borg-backup/commit/0a185269faebc595ba2f193ccbd93de2da11525e))
+* set target branch to dev ([d652b8f](https://github.com/AnotherStranger/docker-borg-backup/commit/d652b8fe1e18e44ad49c75a6200df38d280df15d))
+
+
+### Documentation
+
+* **docs:** :memo: Add information about alternative ssh-key management ([bc2d276](https://github.com/AnotherStranger/docker-borg-backup/commit/bc2d276001e91bed94f67645a59113f1aa19c76f))
+
+
+### Features
+
+* **docker:** :sparkles: Allow mounting an authorized_keys file directly instead of using the environment variable. ([b4a446d](https://github.com/AnotherStranger/docker-borg-backup/commit/b4a446d848d0f04e6eb75f9740274f745068b81b))
+
+
+### Code Refactoring
+
+* :arrow_up: update openssl ([e28b4ea](https://github.com/AnotherStranger/docker-borg-backup/commit/e28b4ea8e56d7b2a8dc67af11a2216040dda1f62))
+
 ## [2.0.0](https://github.com/AnotherStranger/docker-borg-backup/compare/v1.10.4...v2.0.0) (2023-09-14)
 
 

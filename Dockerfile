@@ -7,7 +7,7 @@ ARG OPENSSH_VERSION="9.3_p2-r0"
 ARG SED_VERSION="4.9-r2"
 ARG BASH_VERSION="5.2.15-r5"
 ARG SHADOW_VERSION="4.13-r4"
-ARG OPENSSL_VERSION="3.1.2-r0"
+ARG OPENSSL_VERSION="3.1.3-r0"
 ARG PKG_CONF_VERSION="1.9.5-r0"
 ARG GCC_VERSION="12.2.1_git20220924-r10"
 ARG MUSL_VERSION="1.2.4-r1"
@@ -78,7 +78,6 @@ LABEL org.opencontainers.image.title="borg-server"
 ENV BORG_SERVE_ADDITIONAL_ARGS=""
 ENV BORG_UID=""
 ENV BORG_GID=""
-ENV BORG_AUTHORIZED_KEYS=""
 
 RUN set -x && \
     apk add --no-cache \
@@ -112,7 +111,7 @@ RUN set -x \
 && mkdir -p /var/lib/docker-borg/ssh \
 && mkdir -p /home/borg/backups
 
-VOLUME ["/home/borg/backups/", "/var/lib/docker-borg"]
+VOLUME ["/home/borg/backups/", "/var/lib/docker-borg", "/home/borg/.ssh/"]
 
 COPY ./entrypoint.sh /
 
