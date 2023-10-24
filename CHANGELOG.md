@@ -1,3 +1,22 @@
+## [2.1.0-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0-rc.2...v2.1.0-rc.3) (2023-10-24)
+
+
+### Build System
+
+* **deps:** update actions/checkout action to v4 ([4b4104b](https://github.com/AnotherStranger/docker-borg-backup/commit/4b4104b602939ce916ee17857d1efb2d08d9f634))
+* **deps:** update actions/setup-node action to v4 ([d8e602f](https://github.com/AnotherStranger/docker-borg-backup/commit/d8e602f13d4acfc6886b62c0de9b46731b428e0e))
+* **deps:** update actions/setup-python action to v4 ([998ab14](https://github.com/AnotherStranger/docker-borg-backup/commit/998ab1495e60f62e0f693b346b52e205bc29102a))
+* **deps:** update docker/build-push-action action to v5 ([8239b77](https://github.com/AnotherStranger/docker-borg-backup/commit/8239b778a5bfd7b90db8d85cff495538c2cca707))
+* **deps:** update docker/login-action action to v3 ([57d774a](https://github.com/AnotherStranger/docker-borg-backup/commit/57d774a1b6fbf8708a09818fe8edd0188a109019))
+* **deps:** update docker/metadata-action action to v5 ([efbddb7](https://github.com/AnotherStranger/docker-borg-backup/commit/efbddb7edafd7cf65bbd577b72ad3a7af0078636))
+* **deps:** update docker/setup-buildx-action action to v3 ([89804d8](https://github.com/AnotherStranger/docker-borg-backup/commit/89804d84255b0f6bedb82825bbf559eca1c6ff77))
+* **deps:** update docker/setup-qemu-action action to v3 ([291da6a](https://github.com/AnotherStranger/docker-borg-backup/commit/291da6a7cee0f9b91c6c6b712bd1643e7c05ad55))
+
+
+### Code Refactoring
+
+* :arrow_up: update musl to 1.2.4-r2 ([7eaed43](https://github.com/AnotherStranger/docker-borg-backup/commit/7eaed430f5c3437af49977dd4470375a6041a17e))
+
 ## [2.1.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0-rc.1...v2.1.0-rc.2) (2023-09-22)
 
 
