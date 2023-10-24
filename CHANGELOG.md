@@ -1,3 +1,21 @@
+## [2.1.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0...v2.1.1) (2023-10-24)
+
+
+### Build System
+
+* **release:** 2.1.0-rc.3 ([ed80535](https://github.com/AnotherStranger/docker-borg-backup/commit/ed805356ead78daf5bfcaf6568f8239edacacd66))
+* **release:** 2.1.0-rc.4 ([5fde30a](https://github.com/AnotherStranger/docker-borg-backup/commit/5fde30a0318de07a4a42ac1eaf2399888b78be1a))
+* **release:** 2.1.1-rc.1 ([33fd1a8](https://github.com/AnotherStranger/docker-borg-backup/commit/33fd1a894c5fc1af82f6d3631d281b95bfd6467e))
+* Merge branch 'dev' of github.com:AnotherStranger/docker-borg-backup into dev ([137a3d9](https://github.com/AnotherStranger/docker-borg-backup/commit/137a3d979692c437b950208966df6866f7f4791c))
+* Merge branch 'main' into dev ([c87f1f1](https://github.com/AnotherStranger/docker-borg-backup/commit/c87f1f19b9d955de4279b7433157098a00ec35cd))
+* **deps:** update actions/setup-node action to v4 ([d8e602f](https://github.com/AnotherStranger/docker-borg-backup/commit/d8e602f13d4acfc6886b62c0de9b46731b428e0e))
+
+
+### Code Refactoring
+
+* :arrow_up: update musl to 1.2.4-r2 ([7eaed43](https://github.com/AnotherStranger/docker-borg-backup/commit/7eaed430f5c3437af49977dd4470375a6041a17e))
+* :fire: delete vscode settings directory ([11ba920](https://github.com/AnotherStranger/docker-borg-backup/commit/11ba92054c44a8e7ffbd9d9e7e643562748a470f))
+
 ## [2.1.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0...v2.1.1-rc.1) (2023-10-24)
 
 
