@@ -1,3 +1,15 @@
+## [2.1.0-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0-rc.3...v2.1.0-rc.4) (2023-10-24)
+
+
+### Build System
+
+* Merge branch 'dev' of github.com:AnotherStranger/docker-borg-backup into dev ([137a3d9](https://github.com/AnotherStranger/docker-borg-backup/commit/137a3d979692c437b950208966df6866f7f4791c))
+
+
+### Code Refactoring
+
+* :fire: delete vscode settings directory ([11ba920](https://github.com/AnotherStranger/docker-borg-backup/commit/11ba92054c44a8e7ffbd9d9e7e643562748a470f))
+
 ## [2.1.0-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.0-rc.2...v2.1.0-rc.3) (2023-10-24)
 
 
