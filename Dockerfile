@@ -1,15 +1,15 @@
 ################################################################################
 #                             PIN PACKAGE VERSIONS                             #
 ################################################################################
-ARG BORGBACKUP_VERSION="1.2.6"
-ARG PYTHON_VERSION="3.11"
+ARG BORGBACKUP_VERSION="1.2.7"
+ARG PYTHON_VERSION="3.12"
 ARG OPENSSH_VERSION="9.3_p2-r0"
 ARG SED_VERSION="4.9-r2"
 ARG BASH_VERSION="5.2.15-r5"
 ARG SHADOW_VERSION="4.13-r4"
 ARG OPENSSL_VERSION="3.1.4-r1"
 ARG PKG_CONF_VERSION="1.9.5-r0"
-ARG GCC_VERSION="12.2.1_git20220924-r10"
+ARG BUILD_BASE_VERSION="0.5-r3"
 ARG MUSL_VERSION="1.2.4-r2"
 ARG ACL_VERSION="2.3.1-r3"
 ARG XXHASH_VERSION="0.8.2-r0"
@@ -26,19 +26,19 @@ FROM python:"${PYTHON_VERSION}"-alpine AS builder
 ARG BORGBACKUP_VERSION
 ARG PKG_CONF_VERSION
 ARG OPENSSL_VERSION
-ARG GCC_VERSION
 ARG MUSL_VERSION
 ARG ACL_VERSION
 ARG XXHASH_VERSION
 ARG ZSTD_VERSION
 ARG LZ4_VERSION
 ARG LINUX_HEADERS_VERSION
+ARG BUILD_BASE_VERSION
 
 RUN set -x && \
     apk add --no-cache \
         pkgconf="${PKG_CONF_VERSION}" \
         openssl-dev="${OPENSSL_VERSION}" \
-        gcc="${GCC_VERSION}" \
+        build-base="${BUILD_BASE_VERSION}" \
         musl-dev="${MUSL_VERSION}" \
         acl-dev="${ACL_VERSION}" \
         zstd-dev="${ZSTD_VERSION}" \
