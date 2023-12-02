@@ -2,7 +2,7 @@
 #                             PIN PACKAGE VERSIONS                             #
 ################################################################################
 ARG BORGBACKUP_VERSION="1.2.7"
-ARG PYTHON_VERSION="3.11"
+ARG PYTHON_VERSION="3.12"
 ARG OPENSSH_VERSION="9.3_p2-r0"
 ARG SED_VERSION="4.9-r2"
 ARG BASH_VERSION="5.2.15-r5"
