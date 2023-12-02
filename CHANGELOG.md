@@ -1,3 +1,10 @@
+## [2.1.3-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.3-rc.1...v2.1.3-rc.2) (2023-12-02)
+
+
+### Bug Fixes
+
+* :bug: add build-base as dependency to fix missing gcc ([021bbde](https://github.com/AnotherStranger/docker-borg-backup/commit/021bbde1bc9dfda9d7fd8716c992ce4aca901b74))
+
 ## [2.1.3-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.2...v2.1.3-rc.1) (2023-12-02)
 
 
