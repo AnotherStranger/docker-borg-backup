@@ -3,19 +3,18 @@
 ################################################################################
 ARG BORGBACKUP_VERSION="1.2.7"
 ARG PYTHON_VERSION="3.12"
-ARG OPENSSH_VERSION="9.3_p2-r0"
+ARG OPENSSH_VERSION="9.5_p1-r0"
 ARG SED_VERSION="4.9-r2"
-ARG BASH_VERSION="5.2.15-r5"
-ARG SHADOW_VERSION="4.13-r4"
-ARG OPENSSL_VERSION="3.1.4-r1"
-ARG PKG_CONF_VERSION="1.9.5-r0"
+ARG BASH_VERSION="5.2.21-r0"
+ARG SHADOW_VERSION="4.14.2-r0"
+ARG OPENSSL_VERSION="3.1.4-r2"
+ARG PKG_CONF_VERSION="2.1.0-r0"
 ARG BUILD_BASE_VERSION="0.5-r3"
-ARG MUSL_VERSION="1.2.4-r2"
-ARG ACL_VERSION="2.3.1-r3"
-ARG XXHASH_VERSION="0.8.2-r0"
-ARG ZSTD_VERSION="1.5.5-r4"
-ARG LZ4_VERSION="1.9.4-r4"
-ARG LINUX_HEADERS_VERSION="6.3-r0"
+ARG ACL_VERSION="2.3.1-r4"
+ARG XXHASH_VERSION="0.8.2-r2"
+ARG ZSTD_VERSION="1.5.5-r8"
+ARG LZ4_VERSION="1.9.4-r5"
+ARG LINUX_HEADERS_VERSION="6.5-r0"
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
@@ -26,7 +25,6 @@ FROM python:"${PYTHON_VERSION}"-alpine AS builder
 ARG BORGBACKUP_VERSION
 ARG PKG_CONF_VERSION
 ARG OPENSSL_VERSION
-ARG MUSL_VERSION
 ARG ACL_VERSION
 ARG XXHASH_VERSION
 ARG ZSTD_VERSION
@@ -39,7 +37,6 @@ RUN set -x && \
         pkgconf="${PKG_CONF_VERSION}" \
         openssl-dev="${OPENSSL_VERSION}" \
         build-base="${BUILD_BASE_VERSION}" \
-        musl-dev="${MUSL_VERSION}" \
         acl-dev="${ACL_VERSION}" \
         zstd-dev="${ZSTD_VERSION}" \
         lz4-dev="${LZ4_VERSION}" \
