@@ -1,3 +1,15 @@
+## [2.1.4-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.3...v2.1.4-rc.1) (2023-12-09)
+
+
+### Build System
+
+* **deps:** update actions/setup-python action to v5 ([13b8b04](https://github.com/AnotherStranger/docker-borg-backup/commit/13b8b04c3fbfa5046a475f6609f14c6aa14fe82b))
+
+
+### Code Refactoring
+
+* **deps:** :arrow_up: update package dependencies ([15f30c4](https://github.com/AnotherStranger/docker-borg-backup/commit/15f30c4855de2dfe5f3f6db974d9e2689a70e5bc))
+
 ## [2.1.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.2...v2.1.3) (2023-12-02)
 
 
