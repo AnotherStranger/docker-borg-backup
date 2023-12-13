@@ -35,7 +35,7 @@ fi
 
 # if BORG_AUTHORIZED_KEYS is set substitute authorized_keys file
 if [ -n "${BORG_AUTHORIZED_KEYS+x}" ]; then
-    echo -e "${BORG_AUTHORIZED_KEYS}" | sed  -e "s/^/command=\"borg serve ${BORG_SERVE_ADDITIONAL_ARGS} --restrict-to-path \/home\/borg\/backups\" /"  >/home/borg/.ssh/authorized_keys
+    echo -e "${BORG_AUTHORIZED_KEYS}" | sed -re "/^\\s*(\$|#)/! s/^/restrict,command=\"borg serve ${BORG_SERVE_ADDITIONAL_ARGS} --restrict-to-path \/home\/borg\/backups\" /"  >/home/borg/.ssh/authorized_keys
 fi
 chown borg:borg /home/borg/.ssh/authorized_keys
 chmod og-rwx /home/borg/.ssh/authorized_keys
