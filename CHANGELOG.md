@@ -1,3 +1,10 @@
+## [2.1.5-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.4...v2.1.5-rc.1) (2023-12-13)
+
+
+### Code Refactoring
+
+* **deps:** :arrow_up: update pre-commit hooks ([7f30ae0](https://github.com/AnotherStranger/docker-borg-backup/commit/7f30ae0d641592d487e70647407c9f1694b52095))
+
 ## [2.1.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.3...v2.1.4) (2023-12-09)
 
 
