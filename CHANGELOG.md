@@ -1,3 +1,11 @@
+## [2.2.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.0...v2.2.1-rc.1) (2023-12-13)
+
+
+### Code Refactoring
+
+* **docs:** :memo: update documentation for BORG_AUTHORIZED_KEYS ([d0ba5ca](https://github.com/AnotherStranger/docker-borg-backup/commit/d0ba5ca8eac5550d7f5e2629d07070b0da094cb9))
+* :recycle: keep old way of adding authorized keys in docker-compose.yml ([607bdea](https://github.com/AnotherStranger/docker-borg-backup/commit/607bdea704e52e976f805dbbfb27c7d2af0803f7))
+
 ## [2.2.0](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.4...v2.2.0) (2023-12-13)
 
 
