@@ -8,8 +8,12 @@ services:
 
     image: horaceworblehat/borg-server
     environment:
-      # Specify you public ssh keys here. Separate keys by adding \n
-      BORG_AUTHORIZED_KEYS: "key_one\nkey_two"
+      # Specify you public ssh keys here. You can also separate keys by adding \n
+      BORG_AUTHORIZED_KEYS: |
+        # comment
+        key_one
+        # another comment
+        key_two
       BORG_SERVE_ADDITIONAL_ARGS: "--storage-quota 900G --append-only"
       BORG_UID: "1000"
       BORG_GID: "1000"
