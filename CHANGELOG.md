@@ -1,3 +1,10 @@
+## [2.2.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.5-rc.1...v2.2.0-rc.1) (2023-12-13)
+
+
+### Features
+
+* :recycle: 🔀 Merge pull request [#68](https://github.com/AnotherStranger/docker-borg-backup/issues/68) from Spice-King/patch-1 ([34a827a](https://github.com/AnotherStranger/docker-borg-backup/commit/34a827acb9b652731fc5ebbbfc508781c7da4260))
+
 ## [2.1.5-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.4...v2.1.5-rc.1) (2023-12-13)
 
 
