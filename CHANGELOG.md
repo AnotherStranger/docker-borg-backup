@@ -1,3 +1,21 @@
+## [2.2.0](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.4...v2.2.0) (2023-12-13)
+
+
+### Build System
+
+* **release:** 2.1.5-rc.1 ([cf5ff48](https://github.com/AnotherStranger/docker-borg-backup/commit/cf5ff486e6cd75d0e270e0aa9ed11d8961d54966))
+* **release:** 2.2.0-rc.1 ([44e7fff](https://github.com/AnotherStranger/docker-borg-backup/commit/44e7fffb3abf0f85124e3f8b95b20fe3fd50d343)), closes [#68](https://github.com/AnotherStranger/docker-borg-backup/issues/68)
+
+
+### Features
+
+* :recycle: 🔀 Merge pull request [#68](https://github.com/AnotherStranger/docker-borg-backup/issues/68) from Spice-King/patch-1 ([34a827a](https://github.com/AnotherStranger/docker-borg-backup/commit/34a827acb9b652731fc5ebbbfc508781c7da4260))
+
+
+### Code Refactoring
+
+* **deps:** :arrow_up: update pre-commit hooks ([7f30ae0](https://github.com/AnotherStranger/docker-borg-backup/commit/7f30ae0d641592d487e70647407c9f1694b52095))
+
 ## [2.2.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.1.5-rc.1...v2.2.0-rc.1) (2023-12-13)
 
 

@@ -60,12 +60,12 @@ volumes:
 ### Environment variables
 
 <!-- markdownlint-disable -->
-| Variable                     | Description                                                                       | Example                |
-|------------------------------|-----------------------------------------------------------------------------------|------------------------|
-| `BORG_AUTHORIZED_KEYS`       | Public ssh keys for backups. Use either this Variable or the authorized_key file. | `<key-one>\n<key-two>` |
-| `BORG_UID`                   | UID for the backup user.                                                          | `1000`                 |
-| `BORG_GID`                   | GID for the backup user.                                                          | `1000`                 |
-| `BORG_SERVE_ADDITIONAL_ARGS` | Additional CMD args to borg serve                                                 | `--append-only`        |
+| Variable                     | Description                                                                                                                    | Example                |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `BORG_AUTHORIZED_KEYS`       | Public ssh keys for backups. Use either this Variable or the authorized_key file. May contain comment lines starting with `#`  | `<key-one>\n<key-two>` |
+| `BORG_UID`                   | UID for the backup user.                                                                                                       | `1000`                 |
+| `BORG_GID`                   | GID for the backup user.                                                                                                       | `1000`                 |
+| `BORG_SERVE_ADDITIONAL_ARGS` | Additional CMD args to borg serve                                                                                              | `--append-only`        |
 <!-- markdownlint-enable -->
 
 ### Important Notes
