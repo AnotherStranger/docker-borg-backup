@@ -3,7 +3,7 @@
 ################################################################################
 ARG BORGBACKUP_VERSION="1.2.7"
 ARG PYTHON_VERSION="3.12"
-ARG OPENSSH_VERSION="9.5_p1-r0"
+ARG OPENSSH_VERSION="9.6_p1-r0"
 ARG SED_VERSION="4.9-r2"
 ARG BASH_VERSION="5.2.21-r0"
 ARG SHADOW_VERSION="4.14.2-r0"
