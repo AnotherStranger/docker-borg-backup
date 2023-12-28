@@ -1,3 +1,15 @@
+## [2.2.2-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.1...v2.2.2-rc.1) (2023-12-28)
+
+
+### Build System
+
+* **deps:** update github/codeql-action action to v3 ([e6109dd](https://github.com/AnotherStranger/docker-borg-backup/commit/e6109dd9d988b3f0aa774ce2aa0435a939afed01))
+
+
+### Code Refactoring
+
+* **dependencies:** :arrow_up: Update OPENSSH Version ([95e6ba4](https://github.com/AnotherStranger/docker-borg-backup/commit/95e6ba490b018facef65cf5b5026a9514fc9d5d4))
+
 ## [2.2.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.0...v2.2.1) (2023-12-13)
 
 
