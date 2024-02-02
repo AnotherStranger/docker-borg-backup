@@ -1,3 +1,15 @@
+## [2.2.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.4...v2.2.5) (2024-02-02)
+
+
+### Build System
+
+* **release:** 2.2.5-rc.1 ([9094bc6](https://github.com/AnotherStranger/docker-borg-backup/commit/9094bc6bcd4c26dd697cbf6c0e59bb417bcadb7c))
+
+
+### Code Refactoring
+
+* **deps:** :arrow_up: update openssl version ([1b186e4](https://github.com/AnotherStranger/docker-borg-backup/commit/1b186e4bd1bc6eab67d51b56c16830502ce3058d))
+
 ## [2.2.5-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.4...v2.2.5-rc.1) (2024-02-02)
 
 
