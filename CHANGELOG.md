@@ -1,3 +1,10 @@
+## [2.2.5-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.4...v2.2.5-rc.1) (2024-02-02)
+
+
+### Code Refactoring
+
+* **deps:** :arrow_up: update openssl version ([1b186e4](https://github.com/AnotherStranger/docker-borg-backup/commit/1b186e4bd1bc6eab67d51b56c16830502ce3058d))
+
 ## [2.2.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.3...v2.2.4) (2024-01-18)
 
 
