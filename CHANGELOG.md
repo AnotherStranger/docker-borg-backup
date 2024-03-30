@@ -1,3 +1,10 @@
+## [2.3.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.5-rc.1...v2.3.0-rc.1) (2024-03-30)
+
+
+### Features
+
+* :arrow_up: update borg to 1.2.8 ([4cc19c9](https://github.com/AnotherStranger/docker-borg-backup/commit/4cc19c9ec46bda10841c54d9f1beaccf7421d112))
+
 ## [2.2.5-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.4...v2.2.5-rc.1) (2024-02-02)
 
 
