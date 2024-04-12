@@ -1,3 +1,10 @@
+## [2.3.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.3.0...v2.3.1-rc.1) (2024-04-12)
+
+
+### Code Refactoring
+
+* :recycle: update openssl to 3.1.4-r6 ([489130d](https://github.com/AnotherStranger/docker-borg-backup/commit/489130d20912b3ee9ecf6af2e364b6f176b52e70))
+
 ## [2.3.0](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.2.5...v2.3.0) (2024-03-30)
 
 
