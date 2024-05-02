@@ -105,6 +105,8 @@ RUN set -x \
         -e 's/^X11Forwarding yes$/X11Forwarding no/g' \
         -e 's/^#LogLevel .*$/LogLevel ERROR/g' \
         /etc/ssh/sshd_config \
+&& echo "ClientAliveInterval 10" >> /etc/ssh/sshd_config \
+&& echo "ClientAliveCountMax 30" >> /etc/ssh/sshd_config \
 && mkdir -p /var/lib/docker-borg/ssh \
 && mkdir -p /home/borg/backups
 
