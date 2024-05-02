@@ -1,3 +1,16 @@
+## [2.4.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.3.1...v2.4.0-rc.1) (2024-05-02)
+
+
+### Documentation
+
+* add All Contributors integration ([23a09c9](https://github.com/AnotherStranger/docker-borg-backup/commit/23a09c9b43f13f35b39952054d73d99134394ded))
+* add all-contributorsrc ([89a5ff0](https://github.com/AnotherStranger/docker-borg-backup/commit/89a5ff0a472294d57daab77c27bd73e3e1b926ab))
+
+
+### Features
+
+* set recommended ClientAliveIntercal ([20912cb](https://github.com/AnotherStranger/docker-borg-backup/commit/20912cbebbb3cd90a25b99a7f1fb2a9f30b3fd23))
+
 ## [2.3.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.3.0...v2.3.1) (2024-04-12)
 
 
