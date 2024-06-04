@@ -1,3 +1,9 @@
+## [2.4.0-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.5...v2.4.0-rc.6) (2024-06-04)
+
+### Code Refactoring
+
+* :recycle: use built image in docker-compose example file ([0462733](https://github.com/AnotherStranger/docker-borg-backup/commit/0462733bcca5afd61ad4f8ce19e94487c6d7a1fa))
+
 ## [2.4.0-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.4...v2.4.0-rc.5) (2024-06-04)
 
 ### Bug Fixes
