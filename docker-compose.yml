@@ -2,7 +2,7 @@ version: '3'
 
 services:
   borg:
-    image: ghcr.io/anotherstranger/borg-server:2.3.1
+    image: ghcr.io/anotherstranger/borg-server:2.3.1@sha256:d4c25f2567ec1e3724924c8335ea4b08a404ef282ed32458f8b943f7d1cbe0b5
 
     environment:
       # Specify you public ssh keys here. You can also separate keys by adding \n
