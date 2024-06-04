@@ -1,3 +1,9 @@
+## [2.4.0-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.4...v2.4.0-rc.5) (2024-06-04)
+
+### Bug Fixes
+
+* :bug: use correct match string for alpine deps ([035d715](https://github.com/AnotherStranger/docker-borg-backup/commit/035d71528882aed5c8da55a3b4f0a255cf3563d3))
+
 ## [2.4.0-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.3...v2.4.0-rc.4) (2024-06-04)
 
 ### Bug Fixes
