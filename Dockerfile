@@ -1,25 +1,51 @@
 ################################################################################
 #                             PIN PACKAGE VERSIONS                             #
 ################################################################################
+# renovate: datasource=repology depName=pypi/borgbackup versioning=python
 ARG BORGBACKUP_VERSION="1.2.8"
-ARG PYTHON_VERSION="3.12"
-ARG OPENSSH_VERSION="9.7_p1-r3"
+
+# renovate: datasource=repology depName=alpine_3_19/openssh-server versioning=loose
+ARG OPENSSH_VERSION="9.6_p1-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/sed versioning=loose
 ARG SED_VERSION="4.9-r2"
-ARG BASH_VERSION="5.2.26-r0"
-ARG SHADOW_VERSION="4.15.1-r0"
-ARG OPENSSL_VERSION="3.3.0-r2"
-ARG PKG_CONF_VERSION="2.2.0-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/bash versioning=loose
+ARG BASH_VERSION="5.2.21-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/shadow versioning=loose
+ARG SHADOW_VERSION="4.14.2-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/openssl versioning=loose
+ARG OPENSSL_VERSION="3.1.5-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/pkgconf versioning=loose
+ARG PKG_CONF_VERSION="2.1.0-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/build-base versioning=loose
 ARG BUILD_BASE_VERSION="0.5-r3"
-ARG ACL_VERSION="2.3.2-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/acl-dev versioning=loose
+ARG ACL_VERSION="2.3.1-r4"
+
+# renovate: datasource=repology depName=alpine_3_19/xxhash-dev versioning=loose
 ARG XXHASH_VERSION="0.8.2-r2"
-ARG ZSTD_VERSION="1.5.6-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/zstd versioning=loose
+ARG ZSTD_VERSION="1.5.5-r8"
+
+# renovate: datasource=repology depName=alpine_3_19/lz4 versioning=loose
 ARG LZ4_VERSION="1.9.4-r5"
-ARG LINUX_HEADERS_VERSION="6.6-r0"
+
+# renovate: datasource=repology depName=alpine_3_19/linux-headers versioning=loose
+ARG LINUX_HEADERS_VERSION="6.5-r0"
+
+From python:3.12-alpine3.19 as base
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
 ################################################################################
-FROM python:"${PYTHON_VERSION}"-alpine AS builder
+FROM base AS builder
 
 # Re-define needed ARGS
 ARG BORGBACKUP_VERSION
@@ -49,7 +75,7 @@ RUN set -x && \
 ################################################################################
 #                INSTALL BUILT BORGBACKUP PACKAGE IN NEW STAGE                 #
 ################################################################################
-FROM python:"${PYTHON_VERSION}"-alpine AS runtime-image
+FROM base AS runtime-image
 
 # Re-define needed ARGS
 ARG OPENSSH_VERSION

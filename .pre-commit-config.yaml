@@ -2,13 +2,13 @@ default_stages:
 - commit
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
+  rev: v4.6.0
   hooks:
   - id: trailing-whitespace
   - id: end-of-file-fixer
   - id: check-added-large-files
 - repo: https://github.com/commitizen-tools/commitizen
-  rev: v3.13.0
+  rev: v3.27.0
   hooks:
   - id: commitizen
     stages:
@@ -17,20 +17,24 @@ repos:
   hooks:
   - id: check-useless-excludes
 - repo: https://github.com/hadolint/hadolint
-  rev: v2.12.1-beta
+  rev: v2.13.0-beta
   hooks:
   - id: hadolint-docker
     args:
     - -t
     - warning
 - repo: https://github.com/igorshubovych/markdownlint-cli
-  rev: v0.38.0
+  rev: v0.41.0
   hooks:
   - id: markdownlint-fix
     args:
       - "-i"
       - "CHANGELOG.md"
 - repo: https://github.com/shellcheck-py/shellcheck-py
-  rev: v0.9.0.6
+  rev: v0.10.0.1
   hooks:
   - id: shellcheck
+- repo: https://github.com/renovatebot/pre-commit-hooks
+  rev: 37.388.0
+  hooks:
+    - id: renovate-config-validator
