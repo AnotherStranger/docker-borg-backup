@@ -1,3 +1,51 @@
+## [2.4.0-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.5...v2.4.0-rc.6) (2024-06-04)
+
+### Code Refactoring
+
+* :recycle: use built image in docker-compose example file ([0462733](https://github.com/AnotherStranger/docker-borg-backup/commit/0462733bcca5afd61ad4f8ce19e94487c6d7a1fa))
+
+## [2.4.0-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.4...v2.4.0-rc.5) (2024-06-04)
+
+### Bug Fixes
+
+* :bug: use correct match string for alpine deps ([035d715](https://github.com/AnotherStranger/docker-borg-backup/commit/035d71528882aed5c8da55a3b4f0a255cf3563d3))
+
+## [2.4.0-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.3...v2.4.0-rc.4) (2024-06-04)
+
+### Bug Fixes
+
+* :bug: use correct match string for alpine deps ([cba5fdf](https://github.com/AnotherStranger/docker-borg-backup/commit/cba5fdf6b05b3e942f0d401b3d459aa37f96974a))
+
+## [2.4.0-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.2...v2.4.0-rc.3) (2024-06-04)
+
+### Code Refactoring
+
+* :recycle: add alpine to renovate regex ([287739d](https://github.com/AnotherStranger/docker-borg-backup/commit/287739deb8b8a4e389ba0de9b1fcb979ca6fd907))
+* :recycle: use correct docker tag for python image ([75a472c](https://github.com/AnotherStranger/docker-borg-backup/commit/75a472c572bcfd8d8374bb47d28a60d2dd6806ba))
+
+## [2.4.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.1...v2.4.0-rc.2) (2024-06-04)
+
+### Features
+
+* :sparkles: use renovate to update dependencies ([b04e18d](https://github.com/AnotherStranger/docker-borg-backup/commit/b04e18dee3fd48e85326f193768704a757e0e5e4))
+
+### Code Refactoring
+
+* **deps:** update docker dependencies ([7e8d620](https://github.com/AnotherStranger/docker-borg-backup/commit/7e8d62032daeb0b4055d16ff9ccecd6f6f7ad93f))
+
+## [2.4.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.3.1...v2.4.0-rc.1) (2024-05-02)
+
+
+### Documentation
+
+* add All Contributors integration ([23a09c9](https://github.com/AnotherStranger/docker-borg-backup/commit/23a09c9b43f13f35b39952054d73d99134394ded))
+* add all-contributorsrc ([89a5ff0](https://github.com/AnotherStranger/docker-borg-backup/commit/89a5ff0a472294d57daab77c27bd73e3e1b926ab))
+
+
+### Features
+
+* set recommended ClientAliveIntercal ([20912cb](https://github.com/AnotherStranger/docker-borg-backup/commit/20912cbebbb3cd90a25b99a7f1fb2a9f30b3fd23))
+
 ## [2.3.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.3.0...v2.3.1) (2024-04-12)
 
 
