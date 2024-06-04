@@ -1,18 +1,28 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
-  "baseBranches": ["dev"],
+  "extends": [
+    "config:best-practices"
+  ],
+  "baseBranches": [
+    "dev"
+  ],
   "packageRules": [
     {
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["python"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "python"
+      ],
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>[^.-]+)?(-(?<compatibility>[^0.9]+)(?<build>[0-9.]+))?$"
     }
   ],
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^Dockerfile$"],
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sARG .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
@@ -20,5 +30,5 @@
     }
   ],
   "ignoreUnstable": true,
-  "stabilityDays": 7
+  "minimumReleaseAge": "7 days"
 }
