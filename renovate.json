@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"],
+  "extends": ["config:recommended"],
   "baseBranches": ["dev"],
   "packageRules": [
     {
@@ -20,5 +20,5 @@
     }
   ],
   "ignoreUnstable": true,
-  "stabilityDays": 7
+  "minimumReleaseAge": "7 days"
 }
