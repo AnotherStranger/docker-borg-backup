@@ -8,7 +8,7 @@
     {
       "matchDatasources": ["docker"],
       "matchPackageNames": ["python"],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>[^.-]+)?(-(?<compatibility>.*))?$"
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>[^.-]+)?(-(?<compatibility>[^0.9]+)(?<build>[0-9.]+))?$"
     }
   ],
   "customManagers": [
