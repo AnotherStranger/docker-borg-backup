@@ -2,11 +2,8 @@ version: '3'
 
 services:
   borg:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/anotherstranger/borg-server:2.3.1
 
-    image: horaceworblehat/borg-server
     environment:
       # Specify you public ssh keys here. You can also separate keys by adding \n
       BORG_AUTHORIZED_KEYS: |
