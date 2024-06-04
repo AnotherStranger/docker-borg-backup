@@ -1,3 +1,13 @@
+## [2.4.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0-rc.1...v2.4.0-rc.2) (2024-06-04)
+
+### Features
+
+* :sparkles: use renovate to update dependencies ([b04e18d](https://github.com/AnotherStranger/docker-borg-backup/commit/b04e18dee3fd48e85326f193768704a757e0e5e4))
+
+### Code Refactoring
+
+* **deps:** update docker dependencies ([7e8d620](https://github.com/AnotherStranger/docker-borg-backup/commit/7e8d62032daeb0b4055d16ff9ccecd6f6f7ad93f))
+
 ## [2.4.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.3.1...v2.4.0-rc.1) (2024-05-02)
 
 
