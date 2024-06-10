@@ -1,3 +1,9 @@
+## [2.4.2-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.1...v2.4.2-rc.1) (2024-06-10)
+
+### Code Refactoring
+
+* **deps:** :arrow_up: update python base image to 3.12.4-alpine3.20 ([e4e2a39](https://github.com/AnotherStranger/docker-borg-backup/commit/e4e2a39b06a38b371cf57b59b0c2e646226cadb0))
+
 ## [2.4.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.0...v2.4.1) (2024-06-04)
 
 ### Build System
