@@ -1,3 +1,17 @@
+## [2.4.3-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.2...v2.4.3-rc.1) (2024-07-02)
+
+### Build System
+
+* **deps:** update dependency alpine_3_20/openssl to v3.3.1-r1 ([3f1f28f](https://github.com/AnotherStranger/docker-borg-backup/commit/3f1f28f3c0d443a8e904b7f33b0609529f1a640a))
+
+### Documentation
+
+* add contributors ([d5d7900](https://github.com/AnotherStranger/docker-borg-backup/commit/d5d7900b2d03c7606340527c895ad96eaac9b85a))
+
+### Code Refactoring
+
+* **docs:** :memo: Add small paragraph explaining differences to the upstream project. ([f75853f](https://github.com/AnotherStranger/docker-borg-backup/commit/f75853fbc04228ce9e9435320c60eab5109f23bc))
+
 ## [2.4.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.1...v2.4.2) (2024-06-10)
 
 ### Build System

@@ -1,7 +1,22 @@
 # docker-borg-backup
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A dockerized Borg Backup server. For more information about Borg Backup, an
 excellent de-duplicating backup, refer to: <https://www.borgbackup.org/>.
+If you find something missing for your use case feel free to open a PR or Issue!
+
+This Container is based on [https://github.com/tgbyte/docker-borg-backup](https://github.com/tgbyte/docker-borg-backup).
+This Repo adds the following features/changes:
+
+- Support for mounting an authorized_keys file
+- Restricts ssh to the `borg serve` command by default
+  - Additional arguments can be set using an environment variable
+- Automatic builds and releases following [semantic versioning](https://semver.org/)
+  using [semantic-release](https://semantic-release.gitbook.io/semantic-release)
+- All dependencies are pinned and updated automatically using [renovate](https://docs.renovatebot.com/)
+- The container is built for more [architectures](#supported-architectures)
 
 ## Usage
 
@@ -87,6 +102,26 @@ This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.tgbyte.de/"><img src="https://avatars.githubusercontent.com/u/174129?v=4?s=100" width="100px;" alt="Thilo-Alexander Ginkel"/><br /><sub><b>Thilo-Alexander Ginkel</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=ginkel" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AnotherStranger"><img src="https://avatars.githubusercontent.com/u/6563442?v=4?s=100" width="100px;" alt="AnotherStranger"/><br /><sub><b>AnotherStranger</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=AnotherStranger" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Spice-King"><img src="https://avatars.githubusercontent.com/u/590498?v=4?s=100" width="100px;" alt="Kyle Filz"/><br /><sub><b>Kyle Filz</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=Spice-King" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ph3n1x"><img src="https://avatars.githubusercontent.com/u/8397249?v=4?s=100" width="100px;" alt="Ph3n1x"/><br /><sub><b>Ph3n1x</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=Ph3n1x" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nj"><img src="https://avatars.githubusercontent.com/u/317552?v=4?s=100" width="100px;" alt="Nikolaj Jørgensen"/><br /><sub><b>Nikolaj Jørgensen</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=nj" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td align="center" size="13px" colspan="7">
+        <img src="https://raw.githubusercontent.com/all-contributors/all-contributors-cli/1b8533af435da9854653492b1327a23a4dbd0a10/assets/logo-small.svg">
+          <a href="https://all-contributors.js.org/docs/en/bot/usage">Add your contributions</a>
+        </img>
+      </td>
+    </tr>
+  </tfoot>
+</table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
@@ -100,8 +135,8 @@ license. This license explicitly does not cover the Borg Backup and Ubuntu
 software packaged when running the Docker build. For these components, separate
 licenses apply that you can find at:
 
-* <https://borgbackup.readthedocs.io/en/stable/authors.html#license>
-* <https://ubuntu.com/licensing>
+- <https://borgbackup.readthedocs.io/en/stable/authors.html#license>
+- <https://ubuntu.com/licensing>
 
 Copyright 2023 André Büsgen
 
