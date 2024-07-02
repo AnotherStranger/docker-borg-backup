@@ -5,6 +5,18 @@
 
 A dockerized Borg Backup server. For more information about Borg Backup, an
 excellent de-duplicating backup, refer to: <https://www.borgbackup.org/>.
+If you find something missing for your use case feel free to open a PR or Issue!
+
+This Container is based on [https://github.com/tgbyte/docker-borg-backup](https://github.com/tgbyte/docker-borg-backup).
+This Repo adds the following features/changes:
+
+- Support for mounting an authorized_keys file
+- Restricts ssh to the `borg serve` command by default
+  - Additional arguments can be set using an environment variable
+- Automatic builds and releases following [semantic versioning](https://semver.org/)
+  using [semantic-release](https://semantic-release.gitbook.io/semantic-release)
+- All dependencies are pinned and updated automatically using [renovate](https://docs.renovatebot.com/)
+- The container is built for more [architectures](#supported-architectures)
 
 ## Usage
 
@@ -123,8 +135,8 @@ license. This license explicitly does not cover the Borg Backup and Ubuntu
 software packaged when running the Docker build. For these components, separate
 licenses apply that you can find at:
 
-* <https://borgbackup.readthedocs.io/en/stable/authors.html#license>
-* <https://ubuntu.com/licensing>
+- <https://borgbackup.readthedocs.io/en/stable/authors.html#license>
+- <https://ubuntu.com/licensing>
 
 Copyright 2023 André Büsgen
 
