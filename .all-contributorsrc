@@ -1,4 +1,61 @@
 {
   "projectName": "docker-borg-backup",
-  "projectOwner": "AnotherStranger"
+  "projectOwner": "AnotherStranger",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "ginkel",
+      "name": "Thilo-Alexander Ginkel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/174129?v=4",
+      "profile": "https://www.tgbyte.de/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "AnotherStranger",
+      "name": "AnotherStranger",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6563442?v=4",
+      "profile": "https://github.com/AnotherStranger",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Spice-King",
+      "name": "Kyle Filz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/590498?v=4",
+      "profile": "https://github.com/Spice-King",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Ph3n1x",
+      "name": "Ph3n1x",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8397249?v=4",
+      "profile": "https://github.com/Ph3n1x",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "nj",
+      "name": "Nikolaj Jørgensen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/317552?v=4",
+      "profile": "https://github.com/nj",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
 }
