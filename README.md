@@ -26,6 +26,18 @@ variable `BORG_AUTHORIZED_KEYS`, and mount volumes to `/home/borg/backups` and
 creating backups with following Repo url:
 `ssh://borg@<host or ip>:<port>/./backups/<your_repo>`.
 
+### TrueNas Scale
+
+If you're running TrueNas Scale you can use this container via the chart
+provided by [TrueCharts](https://truecharts.org/).
+You can find the documentation [here](https://truecharts.org/charts/stable/borg-server/).
+
+It seems to be a quick and easy solution for running this container.
+
+**Disclaimer:** I did not write the chart, and I also do not have access to a
+TrueNas installation. Therefore, I also have no possibility of testing the
+integration myself.
+
 ### Docker run
 
 ```bash
