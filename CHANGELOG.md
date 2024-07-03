@@ -1,3 +1,18 @@
+## [2.4.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.3...v2.4.4) (2024-07-03)
+
+### Build System
+
+* **release:** 2.4.4-rc.1 ([7d824f6](https://github.com/AnotherStranger/docker-borg-backup/commit/7d824f671aafdf96cedda3668a130acc918d1f35))
+* **deps:** update dependency alpine_3_20/openssh-server to v9.7_p1-r4 ([26e449d](https://github.com/AnotherStranger/docker-borg-backup/commit/26e449d588f0d6d464210aeea2e894baa5407e3d))
+
+### Documentation
+
+* :memo: Mention the TrueCharts installation method ([4fd0bff](https://github.com/AnotherStranger/docker-borg-backup/commit/4fd0bff81173a9c42ff27d0519b935c029e829b8))
+
+### Bug Fixes
+
+* **renovate:** use correct semantic commit type and switch to best practices ([5701b67](https://github.com/AnotherStranger/docker-borg-backup/commit/5701b67908478b350b7e4ff640b0d15ac9cf940c))
+
 ## [2.4.4-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.3...v2.4.4-rc.1) (2024-07-03)
 
 ### Build System
