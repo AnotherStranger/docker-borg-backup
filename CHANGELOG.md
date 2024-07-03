@@ -1,3 +1,13 @@
+## [2.4.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.4...v2.4.5) (2024-07-03)
+
+### Build System
+
+* **release:** 2.4.5-rc.1 ([e07a7fa](https://github.com/AnotherStranger/docker-borg-backup/commit/e07a7fad8ce271a3e4e27cec3a49da148feac6b7))
+
+### Bug Fixes
+
+* ignore docker-compose in version pinning ([4e91113](https://github.com/AnotherStranger/docker-borg-backup/commit/4e9111360ac7ca07e321d3e6571c498e34d79b52))
+
 ## [2.4.5-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.5-rc.1...v2.4.5-rc.2) (2024-07-03)
 
 ### Code Refactoring
