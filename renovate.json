@@ -19,6 +19,9 @@
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ],
+  "ignorePaths": [
+      "docker-compose.yml"
+  ],
   "ignoreUnstable": true,
   "minimumReleaseAge": "7 days"
 }
