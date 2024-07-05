@@ -1,3 +1,9 @@
+## [2.4.6-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6-rc.3...v2.4.6-rc.4) (2024-07-05)
+
+### Code Refactoring
+
+* **deps:** update docker/setup-buildx-action digest to 4fd8129 ([97ad0fe](https://github.com/AnotherStranger/docker-borg-backup/commit/97ad0fef48052988663c37fd82cf2aefe1d061d1))
+
 ## [2.4.6-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6-rc.2...v2.4.6-rc.3) (2024-07-04)
 
 ### Code Refactoring
