@@ -1,3 +1,9 @@
+## [2.4.7-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.5...v2.4.7-rc.6) (2024-07-05)
+
+### Bug Fixes
+
+* **ci:** load image after build ([911bc99](https://github.com/AnotherStranger/docker-borg-backup/commit/911bc99bbba6c63beceb97b2ca2d6ac428e2515f))
+
 ## [2.4.7-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.4...v2.4.7-rc.5) (2024-07-05)
 
 ### Bug Fixes
