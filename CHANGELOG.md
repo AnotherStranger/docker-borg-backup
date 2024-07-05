@@ -1,3 +1,9 @@
+## [2.4.6-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6-rc.4...v2.4.6-rc.5) (2024-07-05)
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action action to v6 ([82b12cd](https://github.com/AnotherStranger/docker-borg-backup/commit/82b12cdb6b48793a37a93595c109827abfe021bb))
+
 ## [2.4.6-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6-rc.3...v2.4.6-rc.4) (2024-07-05)
 
 ### Code Refactoring
