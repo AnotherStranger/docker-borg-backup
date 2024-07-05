@@ -1,3 +1,9 @@
+## [2.4.7-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.1...v2.4.7-rc.2) (2024-07-05)
+
+### Code Refactoring
+
+* **build:** allow renovate to merge minor updates to dev. This should speed up new releases. ([2ad1440](https://github.com/AnotherStranger/docker-borg-backup/commit/2ad14400aa3f4254d0ec43590f6d25d67bb175d1))
+
 ## [2.4.7-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6...v2.4.7-rc.1) (2024-07-05)
 
 ### Build System
