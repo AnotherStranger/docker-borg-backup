@@ -7,6 +7,11 @@
       "matchDatasources": ["docker"],
       "matchPackageNames": ["python"],
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>[^.-]+)?(-(?<compatibility>[^0.9]+)(?<build>[0-9.]+))?$"
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     }
   ],
   "customManagers": [
@@ -23,5 +28,9 @@
       "docker-compose.yml"
   ],
   "ignoreUnstable": true,
-  "minimumReleaseAge": "7 days"
+  "minimumReleaseAge": "7 days",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  }
 }
