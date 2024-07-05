@@ -1,3 +1,9 @@
+## [2.4.7-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.6...v2.4.7-rc.7) (2024-07-05)
+
+### Bug Fixes
+
+* **ci:** do push on every build ([c3101dd](https://github.com/AnotherStranger/docker-borg-backup/commit/c3101dd3767e3718af8d1ac3f7503a178818b8c3))
+
 ## [2.4.7-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.5...v2.4.7-rc.6) (2024-07-05)
 
 ### Bug Fixes
