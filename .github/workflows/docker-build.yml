@@ -78,6 +78,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Run small selftest on build container image
+        run: docker run -v "./tests/selftest.sh:/selftest.sh" "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}" ./selftest.sh
+
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         if: ${{ github.event_name != 'pull_request' }}
