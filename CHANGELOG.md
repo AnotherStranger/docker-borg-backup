@@ -1,3 +1,15 @@
+## [2.4.7-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6...v2.4.7-rc.1) (2024-07-05)
+
+### Build System
+
+* **release:** 2.4.6-rc.4 ([78731f7](https://github.com/AnotherStranger/docker-borg-backup/commit/78731f7d6bc2810aba07943bbd0197c2cbee1a0e))
+* **release:** 2.4.6-rc.5 ([f33c58c](https://github.com/AnotherStranger/docker-borg-backup/commit/f33c58cd8b0d7a12dde45364c73676ec87b8c231))
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action action to v6 ([82b12cd](https://github.com/AnotherStranger/docker-borg-backup/commit/82b12cdb6b48793a37a93595c109827abfe021bb))
+* **deps:** update docker/setup-buildx-action digest to 4fd8129 ([97ad0fe](https://github.com/AnotherStranger/docker-borg-backup/commit/97ad0fef48052988663c37fd82cf2aefe1d061d1))
+
 ## [2.4.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.5...v2.4.6) (2024-07-04)
 
 ### Build System
