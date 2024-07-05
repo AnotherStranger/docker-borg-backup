@@ -53,14 +53,12 @@ jobs:
         uses: docker/setup-buildx-action@4fd812986e6c8c2a69e18311145f9371337f27d4 # v3
 
       - name: Login to Docker Hub
-        if: github.event_name != 'pull_request'
         uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446 # v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Login to GitHub Container Registry
-        if: github.event_name != 'pull_request'
         uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446 # v3
         with:
           registry: ghcr.io
@@ -72,8 +70,7 @@ jobs:
         id: docker-build
         with:
           context: .
-          push: ${{ github.event_name != 'pull_request' }}
-          load: true
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
@@ -81,11 +78,10 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Run small selftest on build container image
-        run: docker run -v "./tests/selftest.sh:/selftest.sh" "${{steps.docker-build.outputs.imageid}}" ./selftest.sh
+        run: docker run -v "./tests/selftest.sh:/selftest.sh" "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}" ./selftest.sh
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
-        if: ${{ github.event_name != 'pull_request' }}
         with:
           image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}"
           format: "template"
@@ -95,6 +91,5 @@ jobs:
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@b611370bb5703a7efb587f9d136a52ea24c5c38c # v3
-        if: ${{ github.event_name != 'pull_request' }}
         with:
           sarif_file: "trivy-results.sarif"
