@@ -69,6 +69,7 @@ jobs:
 
       - name: Build and push
         uses: docker/build-push-action@1a162644f9a7e87d8f4b053101d1d9a712edc18c # v6
+        id: docker-build
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
@@ -79,7 +80,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Run small selftest on build container image
-        run: docker run -v "./tests/selftest.sh:/selftest.sh" "borg-server:sha-${{ github.sha }}" ./selftest.sh
+        run: docker run -v "./tests/selftest.sh:/selftest.sh" "${{steps.docker-build.outputs.imageid}}" ./selftest.sh
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
