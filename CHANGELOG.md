@@ -1,3 +1,9 @@
+## [2.4.7-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.3...v2.4.7-rc.4) (2024-07-05)
+
+### Bug Fixes
+
+* **ci:** use local image for smoketest ([461b710](https://github.com/AnotherStranger/docker-borg-backup/commit/461b71043463b7ed9ca7446d55a76f4e2c0aa6ac))
+
 ## [2.4.7-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.2...v2.4.7-rc.3) (2024-07-05)
 
 ### Code Refactoring
