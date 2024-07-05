@@ -1,3 +1,57 @@
+## [2.4.7-rc.8](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.7...v2.4.7-rc.8) (2024-07-05)
+
+### Code Refactoring
+
+* **ci:** use trivy output format ([46e58d0](https://github.com/AnotherStranger/docker-borg-backup/commit/46e58d00116d96a2af94d1efaf7a9e4f39cbffd4))
+
+## [2.4.7-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.6...v2.4.7-rc.7) (2024-07-05)
+
+### Bug Fixes
+
+* **ci:** do push on every build ([c3101dd](https://github.com/AnotherStranger/docker-borg-backup/commit/c3101dd3767e3718af8d1ac3f7503a178818b8c3))
+
+## [2.4.7-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.5...v2.4.7-rc.6) (2024-07-05)
+
+### Bug Fixes
+
+* **ci:** load image after build ([911bc99](https://github.com/AnotherStranger/docker-borg-backup/commit/911bc99bbba6c63beceb97b2ca2d6ac428e2515f))
+
+## [2.4.7-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.4...v2.4.7-rc.5) (2024-07-05)
+
+### Bug Fixes
+
+* **ci:** use local image for smoketest ([789a758](https://github.com/AnotherStranger/docker-borg-backup/commit/789a7586f5381fd9cb1242c9d6e0382fd6e39d49))
+
+## [2.4.7-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.3...v2.4.7-rc.4) (2024-07-05)
+
+### Bug Fixes
+
+* **ci:** use local image for smoketest ([461b710](https://github.com/AnotherStranger/docker-borg-backup/commit/461b71043463b7ed9ca7446d55a76f4e2c0aa6ac))
+
+## [2.4.7-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.2...v2.4.7-rc.3) (2024-07-05)
+
+### Code Refactoring
+
+* **ci:** :construction_worker: add small smoketest to build pipeline which veryfies that borg is working. ([758257a](https://github.com/AnotherStranger/docker-borg-backup/commit/758257a79ff399e7a1fde8b42530a708c2c11e01))
+
+## [2.4.7-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.1...v2.4.7-rc.2) (2024-07-05)
+
+### Code Refactoring
+
+* **build:** allow renovate to merge minor updates to dev. This should speed up new releases. ([2ad1440](https://github.com/AnotherStranger/docker-borg-backup/commit/2ad14400aa3f4254d0ec43590f6d25d67bb175d1))
+
+## [2.4.7-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6...v2.4.7-rc.1) (2024-07-05)
+
+### Build System
+
+* **release:** 2.4.6-rc.4 ([78731f7](https://github.com/AnotherStranger/docker-borg-backup/commit/78731f7d6bc2810aba07943bbd0197c2cbee1a0e))
+* **release:** 2.4.6-rc.5 ([f33c58c](https://github.com/AnotherStranger/docker-borg-backup/commit/f33c58cd8b0d7a12dde45364c73676ec87b8c231))
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action action to v6 ([82b12cd](https://github.com/AnotherStranger/docker-borg-backup/commit/82b12cdb6b48793a37a93595c109827abfe021bb))
+* **deps:** update docker/setup-buildx-action digest to 4fd8129 ([97ad0fe](https://github.com/AnotherStranger/docker-borg-backup/commit/97ad0fef48052988663c37fd82cf2aefe1d061d1))
+
 ## [2.4.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.5...v2.4.6) (2024-07-04)
 
 ### Build System
@@ -12,6 +66,18 @@
 * **deps:** pin dependencies ([218825e](https://github.com/AnotherStranger/docker-borg-backup/commit/218825e0de8aa6baf9e74ab33b59be05eb988de3))
 * **deps:** update dependency pypi/borgbackup to v1.4.0 ([ea184b9](https://github.com/AnotherStranger/docker-borg-backup/commit/ea184b9f261d1b97b8e649644a518908788946dd))
 * **deps:** update python:3.12.4-alpine3.20 docker digest to b7662fc ([3af19fc](https://github.com/AnotherStranger/docker-borg-backup/commit/3af19fc5b403a9e39e9112a493c0a59faf998258))
+
+## [2.4.6-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6-rc.4...v2.4.6-rc.5) (2024-07-05)
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action action to v6 ([82b12cd](https://github.com/AnotherStranger/docker-borg-backup/commit/82b12cdb6b48793a37a93595c109827abfe021bb))
+
+## [2.4.6-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6-rc.3...v2.4.6-rc.4) (2024-07-05)
+
+### Code Refactoring
+
+* **deps:** update docker/setup-buildx-action digest to 4fd8129 ([97ad0fe](https://github.com/AnotherStranger/docker-borg-backup/commit/97ad0fef48052988663c37fd82cf2aefe1d061d1))
 
 ## [2.4.6-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6-rc.2...v2.4.6-rc.3) (2024-07-04)
 
