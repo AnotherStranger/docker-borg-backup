@@ -1,3 +1,9 @@
+## [2.4.7-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.2...v2.4.7-rc.3) (2024-07-05)
+
+### Code Refactoring
+
+* **ci:** :construction_worker: add small smoketest to build pipeline which veryfies that borg is working. ([758257a](https://github.com/AnotherStranger/docker-borg-backup/commit/758257a79ff399e7a1fde8b42530a708c2c11e01))
+
 ## [2.4.7-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.1...v2.4.7-rc.2) (2024-07-05)
 
 ### Code Refactoring
