@@ -1,3 +1,9 @@
+## [2.4.7-rc.8](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.7...v2.4.7-rc.8) (2024-07-05)
+
+### Code Refactoring
+
+* **ci:** use trivy output format ([46e58d0](https://github.com/AnotherStranger/docker-borg-backup/commit/46e58d00116d96a2af94d1efaf7a9e4f39cbffd4))
+
 ## [2.4.7-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.6...v2.4.7-rc.7) (2024-07-05)
 
 ### Bug Fixes
