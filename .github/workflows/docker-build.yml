@@ -21,12 +21,19 @@ on:
     branches:
       - "main"
 
+env:
+  TEST_TAG: horaceworblehat/borg-server:test
+
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+
+      - name: Install cosign
+        uses: sigstore/cosign-installer@v3.5.0
+
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5
@@ -54,34 +61,67 @@ jobs:
 
       - name: Login to Docker Hub
         uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446 # v3
+        if: github.event_name != 'pull_request'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Login to GitHub Container Registry
         uses: docker/login-action@0d4c9c5ea7693da7b068278f7b52bda2a190a446 # v3
+        if: github.event_name != 'pull_request'
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get Git commit timestamps
+        run: echo "TIMESTAMP=$(git log -1 --pretty=%ct)" >> $GITHUB_ENV
+
+      - name: Build Testimage
+        uses: docker/build-push-action@v6
+        env:
+          SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
+        with:
+          load: true
+          tags: ${{ env.TEST_TAG }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+
+      - name: Run small selftest on build container image
+        run: docker run -v "./tests/selftest.sh:/selftest.sh" "${{ env.TEST_TAG }}" ./selftest.sh
+
       - name: Build and push
         uses: docker/build-push-action@1a162644f9a7e87d8f4b053101d1d9a712edc18c # v6
         id: docker-build
+        env:
+          SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
         with:
           context: .
-          push: true
+          push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Run small selftest on build container image
-        run: docker run -v "./tests/selftest.sh:/selftest.sh" "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}" ./selftest.sh
+      - name: Sign image with a key
+        run: |
+          images=""
+          for tag in ${TAGS}; do
+            images+="${tag}@${DIGEST} "
+          done
+          cosign sign --yes --key env://COSIGN_PRIVATE_KEY ${images}
+        if: ${{ github.event_name != 'pull_request' }}
+        env:
+          DIGEST: ${{ steps.docker-build.outputs.digest }}
+          TAGS: ${{ steps.meta.outputs.tags }}
+          COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
+          COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
+        if: ${{ github.event_name != 'pull_request' }}
         with:
           image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}"
           format: 'sarif'
@@ -90,5 +130,6 @@ jobs:
 
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@b611370bb5703a7efb587f9d136a52ea24c5c38c # v3
+        if: ${{ github.event_name != 'pull_request' }}
         with:
           sarif_file: "trivy-results.sarif"
