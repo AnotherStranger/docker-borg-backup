@@ -1,3 +1,13 @@
+## [2.5.0-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.2...v2.5.0-rc.3) (2024-07-06)
+
+### Build System
+
+* **release:** 2.4.7 ([f65462e](https://github.com/AnotherStranger/docker-borg-backup/commit/f65462e7b6312a617dea8f013f1734f8d4542573))
+
+### Features
+
+* **docker:** :loud_sound: add hint to use recommended ssh client config ([d26ac4b](https://github.com/AnotherStranger/docker-borg-backup/commit/d26ac4b3520b0761dccf5d3e9abeb1bafefc1fc2))
+
 ## [2.5.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.1...v2.5.0-rc.2) (2024-07-06)
 
 ### Code Refactoring
