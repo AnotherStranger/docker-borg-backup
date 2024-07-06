@@ -1,3 +1,40 @@
+## [2.5.0-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.2...v2.5.0-rc.3) (2024-07-06)
+
+### Build System
+
+* **release:** 2.4.7 ([f65462e](https://github.com/AnotherStranger/docker-borg-backup/commit/f65462e7b6312a617dea8f013f1734f8d4542573))
+
+### Features
+
+* **docker:** :loud_sound: add hint to use recommended ssh client config ([d26ac4b](https://github.com/AnotherStranger/docker-borg-backup/commit/d26ac4b3520b0761dccf5d3e9abeb1bafefc1fc2))
+
+## [2.5.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.1...v2.5.0-rc.2) (2024-07-06)
+
+### Code Refactoring
+
+* **deps:** pin dependencies ([bd9be87](https://github.com/AnotherStranger/docker-borg-backup/commit/bd9be87b3bc6040743cd5c2476f38bdb5c6a822f))
+
+## [2.5.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.8...v2.5.0-rc.1) (2024-07-06)
+
+### Build System
+
+* **Dockerfile:** :pencil2: make FROM keyword uppercase ([849ca9d](https://github.com/AnotherStranger/docker-borg-backup/commit/849ca9d13e8b7c0ec9370e403bd81311b6caf5a0))
+
+### Features
+
+* **ci:** Sign build images with cosign ([0e48b65](https://github.com/AnotherStranger/docker-borg-backup/commit/0e48b651666146b50634246750068118a9a7fc48))
+
+### Bug Fixes
+
+* **ci:** fix typo ([65af96c](https://github.com/AnotherStranger/docker-borg-backup/commit/65af96c12ab422fd6af4c160a802e43af385b0c5))
+* **ci:** fix wrong indentation ([6aa70ed](https://github.com/AnotherStranger/docker-borg-backup/commit/6aa70ed4641ef78127b0cd2ed739cbbc4f13e37f))
+
+### Code Refactoring
+
+* **ci:** return to old behaviour and do not push on pr_event ([6b12399](https://github.com/AnotherStranger/docker-borg-backup/commit/6b123999da54ce98826fdf81c71f920c90cc40aa))
+* **ci:** run tests before push ([5c48207](https://github.com/AnotherStranger/docker-borg-backup/commit/5c482076c22bf94b4c7be500ab9718ff4bb10594))
+* **ci:** use cosign private key setup ([204a002](https://github.com/AnotherStranger/docker-borg-backup/commit/204a002841d58ef5a5281237ac745279d6725f54))
+
 ## [2.4.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.6...v2.4.7) (2024-07-05)
 
 ### Build System

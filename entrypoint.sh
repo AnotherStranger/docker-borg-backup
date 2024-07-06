@@ -62,5 +62,16 @@ echo "Following borg repos are present:"
 du -sh /home/borg/backups/*
 echo "Size of all backups combined: $(du -sh /home/borg/backups)"
 
+echo ""
+echo "It is recommended to add the following entry to your clients ~/.ssh/config:"
+echo "Host borgbackup"
+echo "    Hostname <IP_OR_HOST_HERE>"
+echo "    User borg"
+echo "    Port <PORT>"
+echo "    ServerAliveInterval 10"
+echo "    ServerAliveCountMax 30"
+echo "    IdentityFile <OPTIONAL_PATH_TO_YOUR_KEYFILE>"
+echo ""
+echo "For further information refer to: https://borgbackup.readthedocs.io/en/stable/usage/serve.html#ssh-configuration"
 
 exec /usr/sbin/sshd -D -e
