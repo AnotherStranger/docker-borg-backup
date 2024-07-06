@@ -21,12 +21,16 @@ on:
     branches:
       - "main"
 
+env:
+  TEST_TAG: horaceworblehat/borg-server:test
+
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5
@@ -65,9 +69,28 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get Git commit timestamps
+        run: echo "TIMESTAMP=$(git log -1 --pretty=%ct)" >> $GITHUB_ENV
+
+      - name: Build and export to Docker
+        uses: docker/build-push-action@v6
+        env:
+          SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
+        with:
+          load: true
+          tags: ${{ env.TEST_TAG }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+
+      - name: Run small selftest on build container image
+        run: docker run -v "./tests/selftest.sh:/selftest.sh" "${{ env.TEST_TAG }}" ./selftest.sh
+
       - name: Build and push
         uses: docker/build-push-action@1a162644f9a7e87d8f4b053101d1d9a712edc18c # v6
         id: docker-build
+        env:
+          SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
         with:
           context: .
           push: true
@@ -77,8 +100,6 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-      - name: Run small selftest on build container image
-        run: docker run -v "./tests/selftest.sh:/selftest.sh" "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}" ./selftest.sh
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
