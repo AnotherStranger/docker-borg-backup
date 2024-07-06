@@ -79,8 +79,8 @@ jobs:
         with:
           load: true
           tags: ${{ env.TEST_TAG }}
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
 
       - name: Run small selftest on build container image
