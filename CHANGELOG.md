@@ -1,3 +1,9 @@
+## [2.5.0-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.1...v2.5.0-rc.2) (2024-07-06)
+
+### Code Refactoring
+
+* **deps:** pin dependencies ([bd9be87](https://github.com/AnotherStranger/docker-borg-backup/commit/bd9be87b3bc6040743cd5c2476f38bdb5c6a822f))
+
 ## [2.5.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.4.7-rc.8...v2.5.0-rc.1) (2024-07-06)
 
 ### Build System
