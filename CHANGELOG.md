@@ -1,3 +1,19 @@
+## [2.5.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0...v2.5.1-rc.1) (2024-07-11)
+
+### Build System
+
+* **release:** 2.5.0-rc.4 ([6e3c2a3](https://github.com/AnotherStranger/docker-borg-backup/commit/6e3c2a377565531ccff5d2f6220e23a040954233))
+* **release:** 2.5.0-rc.5 ([2800e53](https://github.com/AnotherStranger/docker-borg-backup/commit/2800e53c20e17659593a4249c6e3048c3fedef3c))
+* **release:** 2.5.0-rc.6 ([d2e2d73](https://github.com/AnotherStranger/docker-borg-backup/commit/d2e2d7312e243a73305092b97bf0149e8640df74))
+* **release:** 2.5.0-rc.7 ([6bee899](https://github.com/AnotherStranger/docker-borg-backup/commit/6bee89965ec64b0b1765184484180f987e3b87cf))
+
+### Code Refactoring
+
+* **deps:** update actions/setup-node digest to 1e60f62 ([51a8ebd](https://github.com/AnotherStranger/docker-borg-backup/commit/51a8ebd4800e1a6446079edaf5af9342cc7069e6))
+* **deps:** update actions/setup-python digest to 39cd149 ([68a7c9c](https://github.com/AnotherStranger/docker-borg-backup/commit/68a7c9cc31500638fda954a8f8b0839001e0ca9c))
+* **deps:** update dependency alpine_3_20/openssl to v3.3.1-r3 ([3e2c548](https://github.com/AnotherStranger/docker-borg-backup/commit/3e2c54807cdf24fb9f7a8af21834052d0e7813fb))
+* **deps:** update python:3.12.4-alpine3.20 docker digest to 0bd77ae ([de36e3c](https://github.com/AnotherStranger/docker-borg-backup/commit/de36e3cc492fef7b736b0df94227c1a1229e033b))
+
 ## [2.5.0-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.6...v2.5.0-rc.7) (2024-07-11)
 
 ### Code Refactoring
