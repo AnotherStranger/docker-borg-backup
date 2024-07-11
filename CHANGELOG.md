@@ -1,3 +1,9 @@
+## [2.5.0-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.5...v2.5.0-rc.6) (2024-07-11)
+
+### Code Refactoring
+
+* **deps:** update actions/setup-node digest to 1e60f62 ([51a8ebd](https://github.com/AnotherStranger/docker-borg-backup/commit/51a8ebd4800e1a6446079edaf5af9342cc7069e6))
+
 ## [2.5.0-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0-rc.4...v2.5.0-rc.5) (2024-07-11)
 
 ### Code Refactoring
