@@ -16,6 +16,7 @@ services:
       BORG_SERVE_ADDITIONAL_ARGS: "--storage-quota 900G --append-only"
       BORG_UID: "1000"
       BORG_GID: "1000"
+      ENUSURE_BACKUP_PERMISSIONS: false
     volumes:
       - backup:/home/borg/backups
       - server_keys:/var/lib/docker-borg

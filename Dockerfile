@@ -101,6 +101,7 @@ LABEL org.opencontainers.image.title="borg-server"
 ENV BORG_SERVE_ADDITIONAL_ARGS=""
 ENV BORG_UID=""
 ENV BORG_GID=""
+ENV ENUSURE_BACKUP_PERMISSIONS=true
 
 RUN set -x && \
     apk add --no-cache \

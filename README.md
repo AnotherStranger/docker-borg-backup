@@ -62,6 +62,7 @@ services:
       BORG_SERVE_ADDITIONAL_ARGS: "--storage-quota 900G --append-only"
       BORG_UID: "1000" # optional: your user id (run id in bash)
       BORG_GID: "1000" # optional: your group id (run id in bash)
+      ENUSURE_BACKUP_PERMISSIONS: true # optional (default: true) if set to false chown -R borg:borg on your backups will be skipped
     volumes:
       - backup:/home/borg/backups # You can find your backups inside this volume
       - server_keys:/var/lib/docker-borg # This volume is used to persist the hosts ssh-keys across updates
@@ -93,6 +94,7 @@ volumes:
 | `BORG_UID`                   | UID for the backup user.                                                                                                       | `1000`                 |
 | `BORG_GID`                   | GID for the backup user.                                                                                                       | `1000`                 |
 | `BORG_SERVE_ADDITIONAL_ARGS` | Additional CMD args to borg serve                                                                                              | `--append-only`        |
+| `ENUSURE_BACKUP_PERMISSIONS` | If set to false chown -R borg:borg on your backups will be skipped. Default: true.                                             | `false`                |
 <!-- markdownlint-enable -->
 
 ### Important Notes
