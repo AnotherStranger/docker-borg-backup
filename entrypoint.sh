@@ -48,7 +48,7 @@ echo "end of /home/borg/.ssh/authorized_keys"
 echo ""
 
 # chown the backups, can be deactivated by setting ENSURE_BACKUP_PERMISSIONS to false
-if [ "${ENUSURE_BACKUP_PERMISSIONS}" = true ]; then
+if [ "${ENSURE_BACKUP_PERMISSIONS}" = true ]; then
     chown -R borg:borg /home/borg/backups
 else
     echo "I will not ensure the correct permissions, because \$ENSURE_BACKUP_PERMISSIONS is not true."
@@ -65,7 +65,7 @@ echo "Environment:"
 echo "   BORG_UID                   = ${BORG_UID}"
 echo "   BORG_GID                   = ${BORG_GID}"
 echo "   BORG_SERVE_ADDITIONAL_ARGS = ${BORG_SERVE_ADDITIONAL_ARGS}"
-echo "   ENUSURE_BACKUP_PERMISSIONS = ${ENUSURE_BACKUP_PERMISSIONS}"
+echo "   ENSURE_BACKUP_PERMISSIONS = ${ENSURE_BACKUP_PERMISSIONS}"
 echo "Borg Version: $(borg --version)"
 echo "Following borg repos are present:"
 du -sh /home/borg/backups/*

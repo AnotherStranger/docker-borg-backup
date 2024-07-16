@@ -40,7 +40,7 @@ ARG LZ4_VERSION="1.9.4-r5"
 # renovate: datasource=repology depName=alpine_3_20/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.6-r0"
 
-FROM python:3.12.4-alpine3.20@sha256:0bd77ae937dce9037e136ab35f41eaf9e012cfd741fc3c8dd4b3e2b63499f12c as base
+FROM python:3.12.4-alpine3.20@sha256:0bd77ae937dce9037e136ab35f41eaf9e012cfd741fc3c8dd4b3e2b63499f12c AS base
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
@@ -101,7 +101,7 @@ LABEL org.opencontainers.image.title="borg-server"
 ENV BORG_SERVE_ADDITIONAL_ARGS=""
 ENV BORG_UID=""
 ENV BORG_GID=""
-ENV ENUSURE_BACKUP_PERMISSIONS=true
+ENV ENSURE_BACKUP_PERMISSIONS=true
 
 RUN set -x && \
     apk add --no-cache \
