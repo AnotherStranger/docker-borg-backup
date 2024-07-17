@@ -1,3 +1,23 @@
+## [2.6.0-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.2-rc.1...v2.6.0-rc.1) (2024-07-17)
+
+### Features
+
+* **container:** :sparkles: Make chown-ing configurable ([eb137a5](https://github.com/AnotherStranger/docker-borg-backup/commit/eb137a5074db689a737dc7b2341b5d4cb6885fd5))
+
+### Bug Fixes
+
+* :bug: fix typo in ENV VAR ([1a921b9](https://github.com/AnotherStranger/docker-borg-backup/commit/1a921b9770cf69b3327c2b419011b4245685ae04))
+
+### Code Refactoring
+
+* :recycle: set ENSURE_BACKUP_PERMISSION to true for ([88d19b1](https://github.com/AnotherStranger/docker-borg-backup/commit/88d19b1616844fd42f421cc69003a59c8424bde1))
+
+## [2.5.2-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.1...v2.5.2-rc.1) (2024-07-12)
+
+### Code Refactoring
+
+* **deps:** update github/codeql-action digest to 4fa2a79 ([b285196](https://github.com/AnotherStranger/docker-borg-backup/commit/b285196844e0b0b475646c2b45ddee0fc42c6373))
+
 ## [2.5.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.5.0...v2.5.1) (2024-07-11)
 
 ### Build System
