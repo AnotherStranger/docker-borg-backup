@@ -1,3 +1,9 @@
+## [2.6.1-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.1-rc.1...v2.6.1-rc.2) (2024-07-24)
+
+### Code Refactoring
+
+* **deps:** update github/codeql-action digest to 2d79040 ([c45724e](https://github.com/AnotherStranger/docker-borg-backup/commit/c45724e7f4697823b1ea98a52acfafc878f94a9c))
+
 ## [2.6.1-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.0...v2.6.1-rc.1) (2024-07-21)
 
 ### Code Refactoring
