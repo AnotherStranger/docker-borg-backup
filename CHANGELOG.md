@@ -1,3 +1,12 @@
+## [2.6.1-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.1-rc.3...v2.6.1-rc.4) (2024-07-27)
+
+### Code Refactoring
+
+* **deps:** update docker/login-action digest to 9780b0c ([b3575a3](https://github.com/AnotherStranger/docker-borg-backup/commit/b3575a39c4fe9f3297777083da895b8d0f30747e))
+* **deps:** update docker/setup-buildx-action digest to aa33708 ([35aa933](https://github.com/AnotherStranger/docker-borg-backup/commit/35aa9331a977a48bf0a4d2861db07201432d1348))
+* **deps:** update docker/setup-qemu-action digest to 49b3bc8 ([8ae9434](https://github.com/AnotherStranger/docker-borg-backup/commit/8ae94340ade6e350a6c463538d338a39b041ef2b))
+* **deps:** update github/codeql-action digest to afb54ba ([2b29a2a](https://github.com/AnotherStranger/docker-borg-backup/commit/2b29a2a2d7ed1888f756d4afeaea94efbd3a02e2))
+
 ## [2.6.1-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.1-rc.2...v2.6.1-rc.3) (2024-07-26)
 
 ### Code Refactoring
