@@ -1,3 +1,10 @@
+## [2.6.2-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.1...v2.6.2-rc.1) (2024-08-04)
+
+### Code Refactoring
+
+* **deps:** update docker/setup-buildx-action digest to 988b5a0 ([d44502c](https://github.com/AnotherStranger/docker-borg-backup/commit/d44502cbbc0d82d0581e4d0e11f7e6a89a72ca81))
+* **deps:** update python:3.12.4-alpine3.20 docker digest to a0c22d8 ([eb3ff90](https://github.com/AnotherStranger/docker-borg-backup/commit/eb3ff90ae56bb101203acd7cf7cbcc8992a604cd))
+
 ## [2.6.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.0...v2.6.1) (2024-07-27)
 
 ### Build System
