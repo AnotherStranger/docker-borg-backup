@@ -1,3 +1,10 @@
+## [2.6.2-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.1...v2.6.2-rc.2) (2024-08-08)
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action digest to 16ebe77 ([32266cb](https://github.com/AnotherStranger/docker-borg-backup/commit/32266cbe1872ae75fb85b895085ce9656ad2d78e))
+* **deps:** update github/codeql-action digest to eb055d7 ([1f11c5a](https://github.com/AnotherStranger/docker-borg-backup/commit/1f11c5abf9936feaedfdbc797b62147f24c3a62a))
+
 ## [2.6.2-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.1...v2.6.2-rc.1) (2024-08-04)
 
 ### Code Refactoring
