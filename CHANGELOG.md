@@ -1,3 +1,9 @@
+## [2.6.2-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.2...v2.6.2-rc.3) (2024-08-09)
+
+### Code Refactoring
+
+* **deps:** update python:3.12.4-alpine3.20 docker digest to 63094ab ([d827417](https://github.com/AnotherStranger/docker-borg-backup/commit/d827417b8702fc5229026db119a0a11f3ef021fc))
+
 ## [2.6.2-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.1...v2.6.2-rc.2) (2024-08-08)
 
 ### Code Refactoring
