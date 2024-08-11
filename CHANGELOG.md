@@ -1,3 +1,10 @@
+## [2.6.2-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.3...v2.6.2-rc.4) (2024-08-11)
+
+### Code Refactoring
+
+* **deps:** update python docker tag to v3.12.5-alpine3.20 ([543ffd9](https://github.com/AnotherStranger/docker-borg-backup/commit/543ffd9ae095a2fe95d1e8edeb52ca370ba21a37))
+* **deps:** update sigstore/cosign-installer action to v3.6.0 ([4b80813](https://github.com/AnotherStranger/docker-borg-backup/commit/4b80813be5312821054e536e9d0ee5c43647ef2a))
+
 ## [2.6.2-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.2...v2.6.2-rc.3) (2024-08-09)
 
 ### Code Refactoring
