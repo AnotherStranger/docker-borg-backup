@@ -1,3 +1,9 @@
+## [2.6.2-rc.9](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.8...v2.6.2-rc.9) (2024-09-02)
+
+### Code Refactoring
+
+* **deps:** update actions/setup-python digest to f677139 ([118e8de](https://github.com/AnotherStranger/docker-borg-backup/commit/118e8debee0fc1e4768db4fc2be110ef65fe89be))
+
 ## [2.6.2-rc.8](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.7...v2.6.2-rc.8) (2024-08-25)
 
 ### Code Refactoring
