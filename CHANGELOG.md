@@ -1,3 +1,9 @@
+## [2.6.2-rc.10](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.9...v2.6.2-rc.10) (2024-09-04)
+
+### Code Refactoring
+
+* **deps:** update dependency alpine_3_20/openssl to v3.3.2-r0 ([081dcf3](https://github.com/AnotherStranger/docker-borg-backup/commit/081dcf310fc56ec8eb0e13026ae0ba5d4435ff79))
+
 ## [2.6.2-rc.9](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2-rc.8...v2.6.2-rc.9) (2024-09-02)
 
 ### Code Refactoring
