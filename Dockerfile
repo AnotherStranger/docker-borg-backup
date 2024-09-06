@@ -17,7 +17,7 @@ ARG BASH_VERSION="5.2.26-r0"
 ARG SHADOW_VERSION="4.15.1-r0"
 
 # renovate: datasource=repology depName=alpine_3_20/openssl versioning=loose
-ARG OPENSSL_VERSION="3.3.1-r3"
+ARG OPENSSL_VERSION="3.3.2-r0"
 
 # renovate: datasource=repology depName=alpine_3_20/pkgconf versioning=loose
 ARG PKG_CONF_VERSION="2.2.0-r0"
@@ -40,7 +40,7 @@ ARG LZ4_VERSION="1.9.4-r5"
 # renovate: datasource=repology depName=alpine_3_20/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.6-r0"
 
-FROM python:3.12.5-alpine3.20@sha256:c2f41e6a5a67bc39b95be3988dd19fbd05d1b82375c46d9826c592cca014d4de AS base
+FROM python:3.12.5-alpine3.20@sha256:aeff64320ffb81056a2afae9d627875c5ba7d303fb40d6c0a43ee49d8f82641c AS base
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
