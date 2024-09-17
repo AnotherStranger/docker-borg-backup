@@ -1,3 +1,9 @@
+## [2.6.4-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.3...v2.6.4-rc.1) (2024-09-17)
+
+### Code Refactoring
+
+* update dependencies ([6531675](https://github.com/AnotherStranger/docker-borg-backup/commit/65316751d4f6e2e5e055a2a9ef9d4464480c4952))
+
 ## [2.6.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2...v2.6.3) (2024-09-06)
 
 ### Build System
