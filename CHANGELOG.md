@@ -1,3 +1,27 @@
+## [2.6.4-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4-rc.3...v2.6.4-rc.4) (2024-09-21)
+
+### Code Refactoring
+
+* **deps:** pin python docker tag to 7130f75 ([383663d](https://github.com/AnotherStranger/docker-borg-backup/commit/383663d3a039656580210ee0e7e07ccff022cbc1))
+
+## [2.6.4-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4-rc.2...v2.6.4-rc.3) (2024-09-21)
+
+### Code Refactoring
+
+* **deps:** update github/codeql-action digest to 294a9d9 ([ee3ba4b](https://github.com/AnotherStranger/docker-borg-backup/commit/ee3ba4b59a1be2e65cb1c8fe35c81db6ff861364))
+
+## [2.6.4-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4-rc.1...v2.6.4-rc.2) (2024-09-20)
+
+### Code Refactoring
+
+* **deps:** update actions/setup-node digest to 0a44ba7 ([073f73d](https://github.com/AnotherStranger/docker-borg-backup/commit/073f73d646ddad7c41421d985f91113f72e5b0b6))
+
+## [2.6.4-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.3...v2.6.4-rc.1) (2024-09-17)
+
+### Code Refactoring
+
+* update dependencies ([6531675](https://github.com/AnotherStranger/docker-borg-backup/commit/65316751d4f6e2e5e055a2a9ef9d4464480c4952))
+
 ## [2.6.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.2...v2.6.3) (2024-09-06)
 
 ### Build System
