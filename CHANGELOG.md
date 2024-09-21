@@ -1,3 +1,9 @@
+## [2.6.4-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4-rc.3...v2.6.4-rc.4) (2024-09-21)
+
+### Code Refactoring
+
+* **deps:** pin python docker tag to 7130f75 ([383663d](https://github.com/AnotherStranger/docker-borg-backup/commit/383663d3a039656580210ee0e7e07ccff022cbc1))
+
 ## [2.6.4-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4-rc.2...v2.6.4-rc.3) (2024-09-21)
 
 ### Code Refactoring
