@@ -1,3 +1,9 @@
+## [2.6.5-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.1...v2.6.5-rc.2) (2024-10-04)
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action digest to 4f58ea7 ([647127f](https://github.com/AnotherStranger/docker-borg-backup/commit/647127fe0f477f03d75d33795ed7b2ebe41d9cb9))
+
 ## [2.6.5-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4...v2.6.5-rc.1) (2024-10-04)
 
 ### Build System
