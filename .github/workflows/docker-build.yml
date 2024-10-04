@@ -78,7 +78,7 @@ jobs:
         run: echo "TIMESTAMP=$(git log -1 --pretty=%ct)" >> $GITHUB_ENV
 
       - name: Build Testimage
-        uses: docker/build-push-action@5cd11c3a4ced054e52742c5fd54dca954e0edd85 # v6
+        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6
         env:
           SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
         with:
@@ -92,7 +92,7 @@ jobs:
         run: docker run -v "./tests/selftest.sh:/selftest.sh" "${{ env.TEST_TAG }}" ./selftest.sh
 
       - name: Build and push
-        uses: docker/build-push-action@5cd11c3a4ced054e52742c5fd54dca954e0edd85 # v6
+        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6
         id: docker-build
         env:
           SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
