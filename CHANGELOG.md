@@ -1,3 +1,9 @@
+## [2.6.5-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.4...v2.6.5-rc.5) (2024-10-12)
+
+### Code Refactoring
+
+* **deps:** update actions/checkout digest to eef6144 ([299dc8e](https://github.com/AnotherStranger/docker-borg-backup/commit/299dc8e805251c226cd5579307b4c936849383ef))
+
 ## [2.6.5-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.3...v2.6.5-rc.4) (2024-10-11)
 
 ### Code Refactoring
