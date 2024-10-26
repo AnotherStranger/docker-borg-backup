@@ -1,3 +1,9 @@
+## [2.6.5-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.6...v2.6.5-rc.7) (2024-10-26)
+
+### Code Refactoring
+
+* **deps:** update python docker tag to v3.13.0-alpine3.20 ([9a713fe](https://github.com/AnotherStranger/docker-borg-backup/commit/9a713fe36ebacdcc6cad4315ffe3d93fdeb76621))
+
 ## [2.6.5-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.5...v2.6.5-rc.6) (2024-10-20)
 
 ### Code Refactoring
