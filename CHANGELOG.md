@@ -1,3 +1,71 @@
+## [2.6.5-rc.9](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.8...v2.6.5-rc.9) (2024-10-28)
+
+### Code Refactoring
+
+* **deps:** update actions/checkout digest to 11bd719 ([53896cc](https://github.com/AnotherStranger/docker-borg-backup/commit/53896cce9620d0f9f5c91c91d8bb33967addd82c))
+
+## [2.6.5-rc.8](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.7...v2.6.5-rc.8) (2024-10-28)
+
+### Code Refactoring
+
+* **deps:** update actions/setup-node digest to 39370e3 ([a5a91e7](https://github.com/AnotherStranger/docker-borg-backup/commit/a5a91e703751017c86722f6a9468ce11fc8fa94a))
+* **deps:** update actions/setup-python digest to 0b93645 ([8b3b4af](https://github.com/AnotherStranger/docker-borg-backup/commit/8b3b4af60e5ad84b4d9977b1919f5444fd08dc38))
+* **deps:** update github/codeql-action digest to 6624720 ([fb4aa70](https://github.com/AnotherStranger/docker-borg-backup/commit/fb4aa708a991d50679342bbdd63ab29f88a362fc))
+
+## [2.6.5-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.6...v2.6.5-rc.7) (2024-10-26)
+
+### Code Refactoring
+
+* **deps:** update python docker tag to v3.13.0-alpine3.20 ([9a713fe](https://github.com/AnotherStranger/docker-borg-backup/commit/9a713fe36ebacdcc6cad4315ffe3d93fdeb76621))
+
+## [2.6.5-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.5...v2.6.5-rc.6) (2024-10-20)
+
+### Code Refactoring
+
+* **deps:** update dependency alpine_3_20/openssl to v3.3.2-r1 ([1631270](https://github.com/AnotherStranger/docker-borg-backup/commit/163127047418cdb639676b8348a514cea71a9e70))
+
+## [2.6.5-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.4...v2.6.5-rc.5) (2024-10-12)
+
+### Code Refactoring
+
+* **deps:** update actions/checkout digest to eef6144 ([299dc8e](https://github.com/AnotherStranger/docker-borg-backup/commit/299dc8e805251c226cd5579307b4c936849383ef))
+
+## [2.6.5-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.3...v2.6.5-rc.4) (2024-10-11)
+
+### Code Refactoring
+
+* **deps:** update sigstore/cosign-installer action to v3.7.0 ([745d5b6](https://github.com/AnotherStranger/docker-borg-backup/commit/745d5b6d28f004975fa58df8df36be577885eab0))
+
+## [2.6.5-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.2...v2.6.5-rc.3) (2024-10-09)
+
+### Code Refactoring
+
+* **deps:** update python docker tag to v3.12.7-alpine3.20 ([132c4ed](https://github.com/AnotherStranger/docker-borg-backup/commit/132c4edacff59b7641736224f94e36eac9ce98a8))
+
+## [2.6.5-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5-rc.1...v2.6.5-rc.2) (2024-10-04)
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action digest to 4f58ea7 ([647127f](https://github.com/AnotherStranger/docker-borg-backup/commit/647127fe0f477f03d75d33795ed7b2ebe41d9cb9))
+
+## [2.6.5-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4...v2.6.5-rc.1) (2024-10-04)
+
+### Build System
+
+* **release:** 2.6.4-rc.5 ([6cc39e6](https://github.com/AnotherStranger/docker-borg-backup/commit/6cc39e63cf9ef94bead88e24b6d221da825f4ce2))
+
+### Code Refactoring
+
+* **deps:** update docker/setup-buildx-action digest to c47758b ([1d8cc89](https://github.com/AnotherStranger/docker-borg-backup/commit/1d8cc8914140d5f5e585d91fdd9980c88e514e9b))
+* **deps:** update github/codeql-action digest to 6db8d63 ([6f687f7](https://github.com/AnotherStranger/docker-borg-backup/commit/6f687f72b67de9deb5a1b4a683ba47a0bc5ec83e))
+
+## [2.6.4-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4-rc.4...v2.6.4-rc.5) (2024-10-04)
+
+### Code Refactoring
+
+* **deps:** update docker/setup-buildx-action digest to c47758b ([1d8cc89](https://github.com/AnotherStranger/docker-borg-backup/commit/1d8cc8914140d5f5e585d91fdd9980c88e514e9b))
+* **deps:** update github/codeql-action digest to 6db8d63 ([6f687f7](https://github.com/AnotherStranger/docker-borg-backup/commit/6f687f72b67de9deb5a1b4a683ba47a0bc5ec83e))
+
 ## [2.6.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.3...v2.6.4) (2024-09-21)
 
 ### Build System
