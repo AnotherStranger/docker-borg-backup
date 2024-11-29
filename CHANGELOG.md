@@ -1,3 +1,11 @@
+## [2.6.6-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5...v2.6.6-rc.1) (2024-11-29)
+
+### Code Refactoring
+
+* **deps:** update docker/metadata-action digest to 369eb59 ([23787e3](https://github.com/AnotherStranger/docker-borg-backup/commit/23787e347a6452e28946174ddae7e2914211e1d0))
+* **deps:** update github/codeql-action digest to f09c1c0 ([2a937dd](https://github.com/AnotherStranger/docker-borg-backup/commit/2a937dd2000f14fd1b0ec63a020bba5e4ba53ce1))
+* **deps:** update python:3.13.0-alpine3.20 docker digest to fcbcbbe ([5474280](https://github.com/AnotherStranger/docker-borg-backup/commit/54742806a6001a6831b06186ea9ad2738e47107e))
+
 ## [2.6.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.4...v2.6.5) (2024-10-30)
 
 ### Build System
