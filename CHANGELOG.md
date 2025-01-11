@@ -1,3 +1,9 @@
+## [2.6.6-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.4...v2.6.6-rc.5) (2025-01-11)
+
+### Code Refactoring
+
+* **deps:** update docker/build-push-action digest to b32b51a ([1f2c87b](https://github.com/AnotherStranger/docker-borg-backup/commit/1f2c87b81bcee85f74dd010eb68849d6e347d369))
+
 ## [2.6.6-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.3...v2.6.6-rc.4) (2025-01-11)
 
 ### Code Refactoring
