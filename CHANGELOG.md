@@ -1,3 +1,11 @@
+## [2.6.6-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.2...v2.6.6-rc.3) (2025-01-11)
+
+### Code Refactoring
+
+* **deps:** update docker/setup-buildx-action digest to 6524bf6 ([b106555](https://github.com/AnotherStranger/docker-borg-backup/commit/b106555a9b50974ac0444febc93e3db9c65e281e))
+* **deps:** update docker/setup-qemu-action digest to 53851d1 ([055dd4b](https://github.com/AnotherStranger/docker-borg-backup/commit/055dd4b001897422178cd982cbb0ad1f82c90a32))
+* **deps:** update python:3.13.1-alpine3.20 docker digest to 9ab3b6e ([d3c84a4](https://github.com/AnotherStranger/docker-borg-backup/commit/d3c84a43a81048ff7c36424c04ad9fc7e0ebd27a))
+
 ## [2.6.6-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.1...v2.6.6-rc.2) (2024-12-12)
 
 ### Code Refactoring
