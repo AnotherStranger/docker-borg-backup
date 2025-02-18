@@ -1,3 +1,9 @@
+## [2.6.6-rc.10](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.9...v2.6.6-rc.10) (2025-02-18)
+
+### Code Refactoring
+
+* **deps:** update dependency alpine_3_21/acl-dev to v2.3.2-r1 ([e0952b2](https://github.com/AnotherStranger/docker-borg-backup/commit/e0952b25671e972e3a8e882701786dfe6fa0329d))
+
 ## [2.6.6-rc.9](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.8...v2.6.6-rc.9) (2025-02-18)
 
 ### Code Refactoring
