@@ -1,3 +1,9 @@
+## [2.6.6-rc.9](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.8...v2.6.6-rc.9) (2025-02-18)
+
+### Code Refactoring
+
+* update deps ([59930d6](https://github.com/AnotherStranger/docker-borg-backup/commit/59930d6478bf7a47249f3a1ffa2ba07b28d30885))
+
 ## [2.6.6-rc.8](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.7...v2.6.6-rc.8) (2025-02-18)
 
 ### Code Refactoring
