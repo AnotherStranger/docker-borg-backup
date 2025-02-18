@@ -32,13 +32,13 @@ ARG ACL_VERSION="2.3.2-r0"
 ARG XXHASH_VERSION="0.8.2-r2"
 
 # renovate: datasource=repology depName=alpine_3_21/zstd versioning=loose
-ARG ZSTD_VERSION="1.5.6-r0"
+ARG ZSTD_VERSION="1.5.6-r2"
 
 # renovate: datasource=repology depName=alpine_3_21/lz4 versioning=loose
-ARG LZ4_VERSION="1.9.4-r5"
+ARG LZ4_VERSION="1.10.0-r0"
 
 # renovate: datasource=repology depName=alpine_3_21/linux-headers versioning=loose
-ARG LINUX_HEADERS_VERSION="6.6-r0"
+ARG LINUX_HEADERS_VERSION="6.6-r1"
 
 FROM python:3.13.2-alpine3.21 AS base
 
