@@ -26,7 +26,7 @@ ARG PKG_CONF_VERSION="2.2.0-r0"
 ARG BUILD_BASE_VERSION="0.5-r3"
 
 # renovate: datasource=repology depName=alpine_3_21/acl-dev versioning=loose
-ARG ACL_VERSION="2.3.2-r0"
+ARG ACL_VERSION="2.3.2-r1"
 
 # renovate: datasource=repology depName=alpine_3_21/xxhash-dev versioning=loose
 ARG XXHASH_VERSION="0.8.2-r2"
