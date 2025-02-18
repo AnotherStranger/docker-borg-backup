@@ -20,7 +20,7 @@ ARG SHADOW_VERSION="4.16.0-r1"
 ARG OPENSSL_VERSION="3.3.3-r0"
 
 # renovate: datasource=repology depName=alpine_3_21/pkgconf versioning=loose
-ARG PKG_CONF_VERSION="2.2.0-r0"
+ARG PKG_CONF_VERSION="2.3.0-r0"
 
 # renovate: datasource=repology depName=alpine_3_21/build-base versioning=loose
 ARG BUILD_BASE_VERSION="0.5-r3"
