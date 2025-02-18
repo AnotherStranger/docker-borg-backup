@@ -14,7 +14,7 @@ ARG SED_VERSION="4.9-r2"
 ARG BASH_VERSION="5.2.26-r0"
 
 # renovate: datasource=repology depName=alpine_3_21/shadow versioning=loose
-ARG SHADOW_VERSION="4.15.1-r0"
+ARG SHADOW_VERSION="4.16.0-r1"
 
 # renovate: datasource=repology depName=alpine_3_21/openssl versioning=loose
 ARG OPENSSL_VERSION="3.3.3-r0"
