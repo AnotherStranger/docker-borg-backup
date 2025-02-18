@@ -1,3 +1,9 @@
+## [2.6.6-rc.8](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.7...v2.6.6-rc.8) (2025-02-18)
+
+### Code Refactoring
+
+* update to alpine 3.21 ([bd27d0d](https://github.com/AnotherStranger/docker-borg-backup/commit/bd27d0de1bd2069a6450e188b47348d362edee41))
+
 ## [2.6.6-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.6...v2.6.6-rc.7) (2025-02-12)
 
 ### Code Refactoring
