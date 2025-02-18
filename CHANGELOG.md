@@ -1,38 +1,24 @@
-## [2.6.6-rc.11](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.10...v2.6.6-rc.11) (2025-02-18)
+## [2.6.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.5...v2.6.6) (2025-01-11)
+
+### Build System
+
+* **release:** 2.6.6-rc.1 ([3d8a733](https://github.com/AnotherStranger/docker-borg-backup/commit/3d8a7337bb6f637f6532f74d01ad4f42bcb8769a))
+* **release:** 2.6.6-rc.2 ([ac4b6c2](https://github.com/AnotherStranger/docker-borg-backup/commit/ac4b6c2da075b3b951962472fb909d0906bb0cc9))
+* **release:** 2.6.6-rc.3 ([050fa5f](https://github.com/AnotherStranger/docker-borg-backup/commit/050fa5f503b78e23ec270749009631fa8e650388))
+* **release:** 2.6.6-rc.4 ([afd2be4](https://github.com/AnotherStranger/docker-borg-backup/commit/afd2be46ddd484125265f7243ddb5044873e1ab4))
+* **release:** 2.6.6-rc.5 ([66ef7c3](https://github.com/AnotherStranger/docker-borg-backup/commit/66ef7c311f50351f821e60459ce93f963f8b0074))
 
 ### Code Refactoring
 
-* **deps:** pin python docker tag to 323a717 ([b0e23ea](https://github.com/AnotherStranger/docker-borg-backup/commit/b0e23ea3c6ace439392738883c855ba3b3214292))
-
-## [2.6.6-rc.10](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.9...v2.6.6-rc.10) (2025-02-18)
-
-### Code Refactoring
-
-* **deps:** update dependency alpine_3_21/acl-dev to v2.3.2-r1 ([e0952b2](https://github.com/AnotherStranger/docker-borg-backup/commit/e0952b25671e972e3a8e882701786dfe6fa0329d))
-
-## [2.6.6-rc.9](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.8...v2.6.6-rc.9) (2025-02-18)
-
-### Code Refactoring
-
-* update deps ([59930d6](https://github.com/AnotherStranger/docker-borg-backup/commit/59930d6478bf7a47249f3a1ffa2ba07b28d30885))
-
-## [2.6.6-rc.8](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.7...v2.6.6-rc.8) (2025-02-18)
-
-### Code Refactoring
-
-* update to alpine 3.21 ([bd27d0d](https://github.com/AnotherStranger/docker-borg-backup/commit/bd27d0de1bd2069a6450e188b47348d362edee41))
-
-## [2.6.6-rc.7](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.6...v2.6.6-rc.7) (2025-02-12)
-
-### Code Refactoring
-
-* **deps:** update sigstore/cosign-installer action to v3.8.0 ([67b0bef](https://github.com/AnotherStranger/docker-borg-backup/commit/67b0befc55e2a110629c344a41e27fbc557d17a4))
-
-## [2.6.6-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.5...v2.6.6-rc.6) (2025-02-12)
-
-### Code Refactoring
-
-* **deps:** update dependency alpine_3_20/openssl to v3.3.3-r0 ([1688db4](https://github.com/AnotherStranger/docker-borg-backup/commit/1688db475f5d698f49e91eb853a3e0622cfa8c65))
+* **deps:** update docker/build-push-action digest to b32b51a ([1f2c87b](https://github.com/AnotherStranger/docker-borg-backup/commit/1f2c87b81bcee85f74dd010eb68849d6e347d369))
+* **deps:** update docker/metadata-action digest to 369eb59 ([23787e3](https://github.com/AnotherStranger/docker-borg-backup/commit/23787e347a6452e28946174ddae7e2914211e1d0))
+* **deps:** update docker/setup-buildx-action digest to 6524bf6 ([b106555](https://github.com/AnotherStranger/docker-borg-backup/commit/b106555a9b50974ac0444febc93e3db9c65e281e))
+* **deps:** update docker/setup-qemu-action digest to 53851d1 ([055dd4b](https://github.com/AnotherStranger/docker-borg-backup/commit/055dd4b001897422178cd982cbb0ad1f82c90a32))
+* **deps:** update github/codeql-action digest to b6a472f ([c8715ae](https://github.com/AnotherStranger/docker-borg-backup/commit/c8715ae5c30f50ce86a6af87c587245bd7f7dc6a))
+* **deps:** update github/codeql-action digest to f09c1c0 ([2a937dd](https://github.com/AnotherStranger/docker-borg-backup/commit/2a937dd2000f14fd1b0ec63a020bba5e4ba53ce1))
+* **deps:** update python docker tag to v3.13.1-alpine3.20 ([5b894f8](https://github.com/AnotherStranger/docker-borg-backup/commit/5b894f8878fa604fcdda9793eab477d6484ac419))
+* **deps:** update python:3.13.0-alpine3.20 docker digest to fcbcbbe ([5474280](https://github.com/AnotherStranger/docker-borg-backup/commit/54742806a6001a6831b06186ea9ad2738e47107e))
+* **deps:** update python:3.13.1-alpine3.20 docker digest to 9ab3b6e ([d3c84a4](https://github.com/AnotherStranger/docker-borg-backup/commit/d3c84a43a81048ff7c36424c04ad9fc7e0ebd27a))
 
 ## [2.6.6-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6-rc.4...v2.6.6-rc.5) (2025-01-11)
 
