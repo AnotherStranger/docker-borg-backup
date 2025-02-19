@@ -1,3 +1,9 @@
+## [2.6.7-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.7-rc.1...v2.6.7-rc.2) (2025-02-19)
+
+### Code Refactoring
+
+* **deps:** update dependency alpine_3_21/openssh-server to v9.9_p2-r0 ([0ff4471](https://github.com/AnotherStranger/docker-borg-backup/commit/0ff4471f3ec4fec777dda3d1b74074fc3ed7bce9))
+
 ## [2.6.7-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.6...v2.6.7-rc.1) (2025-02-18)
 
 ### Build System
