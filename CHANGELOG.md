@@ -1,3 +1,9 @@
+## [2.6.7-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.7-rc.3...v2.6.7-rc.4) (2025-02-27)
+
+### Code Refactoring
+
+* **deps:** update sigstore/cosign-installer action to v3.8.1 ([70d7af2](https://github.com/AnotherStranger/docker-borg-backup/commit/70d7af2b0b3c97c48d93d241d543f256ff677563))
+
 ## [2.6.7-rc.3](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.7-rc.2...v2.6.7-rc.3) (2025-02-19)
 
 ### Code Refactoring
