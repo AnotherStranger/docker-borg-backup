@@ -1,3 +1,9 @@
+## [2.6.8-rc.2](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.8-rc.1...v2.6.8-rc.2) (2025-03-20)
+
+### Code Refactoring
+
+* **deps:** update actions/setup-node digest to cdca736 ([71f94ad](https://github.com/AnotherStranger/docker-borg-backup/commit/71f94ad8efd359e8f17a08e6fc4abd87253d6e5b))
+
 ## [2.6.8-rc.1](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.7...v2.6.8-rc.1) (2025-03-16)
 
 ### Build System
