@@ -1,15 +1,32 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices", ":semanticCommitTypeAll(refactor)"],
-  "baseBranches": ["dev"],
+  "extends": [
+    "config:best-practices",
+    ":semanticCommitTypeAll(refactor)",
+    "group:all",
+    "workarounds:all",
+    "automergeDigest",
+    "automergeMinor",
+    ":configMigration"
+  ],
+  "baseBranches": [
+    "dev"
+  ],
   "packageRules": [
     {
-      "matchDatasources": ["docker"],
-      "matchPackageNames": ["python"],
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "python"
+      ],
       "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>[^.-]+)?(-(?<compatibility>[^0.9]+)(?<build>[0-9.]+))?$"
     },
     {
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "matchCurrentVersion": "!/^0/",
       "automerge": true
     }
@@ -17,7 +34,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^Dockerfile$"],
+      "fileMatch": [
+        "^Dockerfile$"
+      ],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sARG .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
@@ -25,7 +44,7 @@
     }
   ],
   "ignorePaths": [
-      "docker-compose.yml"
+    "docker-compose.yml"
   ],
   "ignoreUnstable": true,
   "minimumReleaseAge": "7 days",
