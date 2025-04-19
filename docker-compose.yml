@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   borg:
     #image: ghcr.io/anotherstranger/borg-server:latest
