@@ -1,3 +1,11 @@
+## [2.6.8-rc.6](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.8-rc.5...v2.6.8-rc.6) (2025-04-19)
+
+### Code Refactoring
+
+* **deps:** update actions/setup-node digest to 49933ea ([2292592](https://github.com/AnotherStranger/docker-borg-backup/commit/229259270017333334f6fc20fb56304c74f88a46))
+* **deps:** update actions/setup-python digest to 8d9ed9a ([393926e](https://github.com/AnotherStranger/docker-borg-backup/commit/393926e45bf93f6aca6130d95f3994f658b693b9))
+* **deps:** update github/codeql-action digest to 45775bd ([5b72b76](https://github.com/AnotherStranger/docker-borg-backup/commit/5b72b76b469c47e396bfbc404305cfacc4fe4e1c))
+
 ## [2.6.8-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.8-rc.4...v2.6.8-rc.5) (2025-04-19)
 
 ### Code Refactoring
