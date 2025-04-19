@@ -2,7 +2,7 @@
 #                             PIN PACKAGE VERSIONS                             #
 ################################################################################
 # renovate: datasource=repology depName=pypi/borgbackup versioning=python
-ARG BORGBACKUP_VERSION="1.4.0"
+ARG BORGBACKUP_VERSION="1.4.1"
 
 # renovate: datasource=repology depName=alpine_3_21/openssh-server versioning=loose
 ARG OPENSSH_VERSION="9.9_p2-r0"
@@ -40,7 +40,7 @@ ARG LZ4_VERSION="1.10.0-r0"
 # renovate: datasource=repology depName=alpine_3_21/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.6-r1"
 
-FROM python:3.13.2-alpine3.21@sha256:323a717dc4a010fee21e3f1aac738ee10bb485de4e7593ce242b36ee48d6b352 AS base
+FROM python:3.13.3-alpine3.21@sha256:18159b2be11db91f84b8f8f655cd860f805dbd9e49a583ddaac8ab39bf4fe1a7 AS base
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
