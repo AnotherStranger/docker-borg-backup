@@ -1,3 +1,9 @@
+## [2.6.8-rc.5](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.8-rc.4...v2.6.8-rc.5) (2025-04-19)
+
+### Code Refactoring
+
+* **deps:** update dependency pypi/borgbackup to v1.4.1 ([7e8d85a](https://github.com/AnotherStranger/docker-borg-backup/commit/7e8d85afcf0920c4310b65c8f6ef312dfa75f543))
+
 ## [2.6.8-rc.4](https://github.com/AnotherStranger/docker-borg-backup/compare/v2.6.8-rc.3...v2.6.8-rc.4) (2025-04-16)
 
 ### Code Refactoring
