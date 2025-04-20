@@ -5,8 +5,8 @@
     ":semanticCommitTypeAll(refactor)",
     "group:all",
     "workarounds:all",
-    "automergeDigest",
-    "automergeMinor",
+    ":automergeDigest",
+    ":automergeMinor",
     ":configMigration"
   ],
   "baseBranches": [
