@@ -23,7 +23,6 @@ on:
 
 env:
   TEST_TAG: horaceworblehat/borg-server:test
-  CACHE_TAG: horaceworblehat/borg-server:buildcache
 
 jobs:
   docker:
@@ -85,8 +84,8 @@ jobs:
         with:
           load: true
           tags: ${{ env.TEST_TAG }}
-          cache-from: type=registry,ref=${{ env.TEST_TAG }}
-          cache-to: type=registry,ref=${{ env.TEST_TAG }},mode=max
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
 
       - name: Run small selftest on build container image
@@ -103,10 +102,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
-          cache-from: type=registry,ref=${{ env.TEST_TAG }}
-          cache-to: type=registry,ref=${{ env.TEST_TAG }},mode=max
-
-
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Sign image with a key
         run: |
