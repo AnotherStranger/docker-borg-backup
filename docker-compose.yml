@@ -2,7 +2,6 @@ services:
   borg:
     #image: ghcr.io/anotherstranger/borg-server:latest
     build: .
-
     environment:
       # Specify you public ssh keys here. You can also separate keys by adding \n
       BORG_AUTHORIZED_KEYS: |
@@ -21,7 +20,6 @@ services:
       # - <path to authorized_keys file>:/home/borg/.ssh/authorized_keys <- Alternative to BORG_AUTHORIZED_KEYS
     ports:
       - "8022:22"
-
 volumes:
   backup:
   server_keys:

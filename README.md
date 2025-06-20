@@ -30,7 +30,7 @@ creating backups with following Repo url:
 
 If you're running TrueNas Scale you can use this container via the chart
 provided by [TrueCharts](https://truecharts.org/).
-You can find the documentation [here](https://truecharts.org/charts/stable/borg-server/).
+You can find the documentation here: [https://truecharts.org/charts/stable/borg-server/](https://truecharts.org/charts/stable/borg-server/).
 
 It seems to be a quick and easy solution for running this container.
 
