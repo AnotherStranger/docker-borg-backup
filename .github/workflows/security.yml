@@ -7,20 +7,17 @@ on:
   pull_request:
   schedule:
     - cron: '* * * * 0' # run weekly
-
 permissions:
   contents: read
   actions: read
   checks: write
   security-events: write
-
 jobs:
   report:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-
       - name: Run Trivy vulnerability scanner in repo mode
         uses: aquasecurity/trivy-action@6c175e9c4083a92bbca2f9724c8a5e33bc2d97a5 # 0.30.0
         with:
@@ -28,8 +25,7 @@ jobs:
           format: 'sarif'
           output: 'trivy-results-fs.sarif'
           severity: 'CRITICAL,HIGH,MEDIUM'
-
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@45775bd8235c68ba998cffa5171334d58593da47 # v3
+        uses: github/codeql-action/upload-sarif@fca7ace96b7d713c7035871441bd52efbe39e27e # v3
         with:
           sarif_file: 'trivy-results-fs.sarif'

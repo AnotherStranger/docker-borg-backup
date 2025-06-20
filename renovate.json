@@ -26,6 +26,9 @@
 	"ignorePaths": ["docker-compose.yml"],
 	"ignoreUnstable": true,
 	"minimumReleaseAge": "7 days",
+	"pre-commit": {
+		"enabled": true
+	},
 	"lockFileMaintenance": {
 		"enabled": true,
 		"automerge": true

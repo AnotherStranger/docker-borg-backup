@@ -1,9 +1,7 @@
 name: docker-build
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
-
 on:
   schedule:
     - cron: "0 10 * * *"
@@ -20,20 +18,16 @@ on:
   pull_request:
     branches:
       - "main"
-
 env:
   TEST_TAG: horaceworblehat/borg-server:test
-
 jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
-
       - name: Install cosign
-        uses: sigstore/cosign-installer@d7d6bc7722e3daa8354c50bcb52f4837da5e9b6a # v3.8.1
-
+        uses: sigstore/cosign-installer@3454372f43399081ed03b604cb2d021dabca52bb # v3.8.2
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@902fa8ec7d6ecbf8d84d538b9b233a880e428804 # v5
@@ -52,20 +46,16 @@ jobs:
             type=semver,pattern={{major}}
             type=sha,format=long
             type=raw,value=latest,enable={{is_default_branch}}
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@29109295f81e9208d7d86ff1c6c12d2833863392 # v3
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@b5ca514318bd6ebac0fb2aedd5d36ec1b5c232a2 # v3
-
       - name: Login to Docker Hub
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3
         if: github.event_name != 'pull_request'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
       - name: Login to GitHub Container Registry
         uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3
         if: github.event_name != 'pull_request'
@@ -73,12 +63,10 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Get Git commit timestamps
         run: echo "TIMESTAMP=$(git log -1 --pretty=%ct)" >> $GITHUB_ENV
-
       - name: Build Testimage
-        uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6
+        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6
         env:
           SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
         with:
@@ -86,13 +74,10 @@ jobs:
           tags: ${{ env.TEST_TAG }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-
       - name: Run small selftest on build container image
         run: docker run -v "./tests/selftest.sh:/selftest.sh" "${{ env.TEST_TAG }}" ./selftest.sh
-
       - name: Build and push
-        uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6
+        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6
         id: docker-build
         env:
           SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
@@ -104,7 +89,6 @@ jobs:
           platforms: linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
       - name: Sign image with a key
         run: |
           images=""
@@ -118,7 +102,6 @@ jobs:
           TAGS: ${{ steps.meta.outputs.tags }}
           COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
           COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
-
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         if: ${{ github.event_name != 'pull_request' }}
@@ -127,9 +110,8 @@ jobs:
           format: 'sarif'
           output: "trivy-results.sarif"
           severity: "CRITICAL,HIGH"
-
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@45775bd8235c68ba998cffa5171334d58593da47 # v3
+        uses: github/codeql-action/upload-sarif@fca7ace96b7d713c7035871441bd52efbe39e27e # v3
         if: ${{ github.event_name != 'pull_request' }}
         with:
           sarif_file: "trivy-results.sarif"
