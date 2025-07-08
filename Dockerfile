@@ -4,40 +4,40 @@
 # renovate: datasource=repology depName=pypi/borgbackup versioning=python
 ARG BORGBACKUP_VERSION="1.4.1"
 
-# renovate: datasource=repology depName=alpine_3_21/openssh-server versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/openssh-server versioning=loose
 ARG OPENSSH_VERSION="10.0_p1-r7"
 
-# renovate: datasource=repology depName=alpine_3_21/sed versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/sed versioning=loose
 ARG SED_VERSION="4.9-r2"
 
-# renovate: datasource=repology depName=alpine_3_21/bash versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/bash versioning=loose
 ARG BASH_VERSION="5.2.37-r0"
 
-# renovate: datasource=repology depName=alpine_3_21/shadow versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/shadow versioning=loose
 ARG SHADOW_VERSION="4.17.3-r0"
 
-# renovate: datasource=repology depName=alpine_3_21/openssl versioning=loose
-ARG OPENSSL_VERSION="3.5.0-r0"
+# renovate: datasource=repology depName=alpine_3_22/openssl versioning=loose
+ARG OPENSSL_VERSION="3.5.1-r0"
 
-# renovate: datasource=repology depName=alpine_3_21/pkgconf versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/pkgconf versioning=loose
 ARG PKG_CONF_VERSION="2.4.3-r0"
 
-# renovate: datasource=repology depName=alpine_3_21/build-base versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/build-base versioning=loose
 ARG BUILD_BASE_VERSION="0.5-r3"
 
-# renovate: datasource=repology depName=alpine_3_21/acl-dev versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/acl-dev versioning=loose
 ARG ACL_VERSION="2.3.2-r1"
 
-# renovate: datasource=repology depName=alpine_3_21/xxhash-dev versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/xxhash-dev versioning=loose
 ARG XXHASH_VERSION="0.8.3-r0"
 
-# renovate: datasource=repology depName=alpine_3_21/zstd versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/zstd versioning=loose
 ARG ZSTD_VERSION="1.5.7-r0"
 
-# renovate: datasource=repology depName=alpine_3_21/lz4 versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/lz4 versioning=loose
 ARG LZ4_VERSION="1.10.0-r0"
 
-# renovate: datasource=repology depName=alpine_3_21/linux-headers versioning=loose
+# renovate: datasource=repology depName=alpine_3_22/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.14.2-r0"
 
 FROM python:3.13.5-alpine3.22@sha256:9b4929a72599b6c6389ece4ecbf415fd1355129f22bb92bb137eea098f05e975 AS base
