@@ -54,8 +54,18 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "MisterGoodcat",
+      "name": "Peter Kuhn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7507932?v=4",
+      "profile": "http://www.mistergoodcat.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "linkToUsage": true
+  "linkToUsage": true,
+  "commitType": "docs"
 }
