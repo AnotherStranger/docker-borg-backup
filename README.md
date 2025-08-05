@@ -1,6 +1,6 @@
 # docker-borg-backup
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A dockerized Borg Backup server. For more information about Borg Backup, an
@@ -25,18 +25,6 @@ variable `BORG_AUTHORIZED_KEYS`, and mount volumes to `/home/borg/backups` and
 `/var/lib/docker-borg`. Once the container is up and running you can start
 creating backups with following Repo url:
 `ssh://borg@<host or ip>:<port>/./backups/<your_repo>`.
-
-### TrueNas Scale
-
-If you're running TrueNas Scale you can use this container via the chart
-provided by [TrueCharts](https://truecharts.org/).
-You can find the documentation here: [https://truecharts.org/charts/stable/borg-server/](https://truecharts.org/charts/stable/borg-server/).
-
-It seems to be a quick and easy solution for running this container.
-
-**Disclaimer:** I did not write the chart, and I also do not have access to a
-TrueNas installation. Therefore, I also have no possibility of testing the
-integration myself.
 
 ### Docker run
 
@@ -106,6 +94,60 @@ the Borg container.
 To persist the container's SSH host keys across container updates, mount a
 volume to `/var/lib/docker-borg`.
 
+## TrueNAS Community Edition
+
+**TL;DR**: The Docker image can be set up relatively easily as custom application in TrueNAS. To learn more about the concept and configuration of custom apps, please refer to the official documentation here: [https://apps.truenas.com/managing-apps/](https://apps.truenas.com/managing-apps/). The idiomatic way of configuring custom apps is not particularly well-suited for the sensitive nature of a Borg server however, so the following describes a few tweaks to improve the setup.
+
+### Critical Details of the Default App Configuration
+
+There is two moving parts in the TrueNAS apps concept that should be challenged:
+
+- TrueNAS offers a dataset preset for `Apps` usage. This is problematic because it automatically configures extensive ACLs for the `builtin_users` group, which (despite the misleading name) automatically contains all custom created user accounts. Consequently, this would grant write permissions to the raw Borg repository files to all users of the system, something that is highly undesired.
+- TrueNAS uses a single user account that is intended to be used by apps (UID 568), either to start the container with, or for individual processes. In case of a privilege escalation in _any_ of the configured app containers, an attacker could potentially access all of the raw Borg data. Using that built-in user account hence is not an ideal option.
+
+### Prerequisites
+
+1. Create a separate user named `borg` and take note of the generated `UID` and `GID`. Recommended configuration details:
+
+    - Lock the user account
+    - Do not create a home directory
+    - Do not configure shell/SSH/SMB
+    - Do not select any sudo features
+
+2. Create the two required datasets for the backups and server keys. For these:
+
+    - Do _not_ use the `Apps` preset, but use `Generic` instead
+    - Change the owner to the `borg` user and group
+    - Make sure to remove all default permissions preselected for `other`
+
+### Create the Custom App
+
+Set the following configuration options and adjust at your discretion.
+
+<!-- markdownlint-disable -->
+| Section                 | Option                                            | Value                                                                                                                                                        |
+|-------------------------|---------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Application             | Application Name                                  | For example, `borg`                                                                                                                                          |
+| Image Configuration     | Repository                                        | `horaceworblehat/borg-server`                                                                                                                                |
+|                         | Tag                                               | `latest`                                                                                                                                                     |
+| Container Configuration | Environment Variable `BORG_AUTHORIZED_KEYS`       | Your public SSH key                                                                                                                                          |
+|                         | Environment Variable `BORG_UID`                   | The `UID` of the dedicated `borg` user                                                                                                                       |
+|                         | Environment Variable `BORG_GID`                   | The `GID` of the dedicated `borg` user                                                                                                                       |
+|                         | Environment variable `BORG_SERVE_ADDITIONAL_ARGS` | Additional args for the Borg server, as documented, for example `--append-only`                                                                              |
+| Network Configuration   | Ports                                             | Unless you bind the app to a dedicated IP address (e.g. VLAN), use a host port other than `22` to avoid conflicts with the TrueNAS host SSH. Example: `8022` |
+| Storage Configuration   | Storage 1: Bind `/home/borg/backups`              | Use the host path you created before, e.g. `mnt/data/backups/borg`                                                                                           |
+|                         | Storage 2: Bind `/var/lib/docker-borg`            | Use the host path you created before, e.g. `mnt/apps/borg/data`                                                                                              |
+<!-- markdownlint-enable -->
+
+### Optional: Mount `authorized_keys`
+
+If you intend to mount the `authorized_keys` instead of providing the value through the environment variable, note that you need to bind _the parent directory_ to the host instead. The storage configuration should look like:
+
+- Mount path: `/home/borg/.ssh`
+- Host path: `/mnt/your/desired/path`
+
+As with the other host paths described here, create the dataset as non-ACL, owned by the dedicated `borg` user. Make sure to set the permissions correctly for what SSH expects for both the dataset as well as your `authorized_keys` file.
+
 ## Supported Architectures
 
 This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
@@ -124,6 +166,7 @@ This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Spice-King"><img src="https://avatars.githubusercontent.com/u/590498?v=4?s=100" width="100px;" alt="Kyle Filz"/><br /><sub><b>Kyle Filz</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=Spice-King" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ph3n1x"><img src="https://avatars.githubusercontent.com/u/8397249?v=4?s=100" width="100px;" alt="Ph3n1x"/><br /><sub><b>Ph3n1x</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=Ph3n1x" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nj"><img src="https://avatars.githubusercontent.com/u/317552?v=4?s=100" width="100px;" alt="Nikolaj Jørgensen"/><br /><sub><b>Nikolaj Jørgensen</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=nj" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.mistergoodcat.com"><img src="https://avatars.githubusercontent.com/u/7507932?v=4?s=100" width="100px;" alt="Peter Kuhn"/><br /><sub><b>Peter Kuhn</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=MisterGoodcat" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>

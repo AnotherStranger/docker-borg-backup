@@ -38,3 +38,7 @@ repos:
     rev: v0.17.2
     hooks:
       - id: yamlfmt
+  - repo: https://github.com/biomejs/pre-commit
+    rev: v2.0.0
+    hooks:
+      - id: biome-format

@@ -7,9 +7,10 @@
 		"workarounds:all",
 		":automergeDigest",
 		":automergeMinor",
-		":configMigration"
+		":configMigration",
+		"customManagers:dockerfileVersions"
 	],
-	"baseBranches": [
+	"baseBranchPatterns": [
 		"dev"
 	],
 	"packageRules": [
@@ -29,18 +30,6 @@
 			],
 			"matchCurrentVersion": "!/^0/",
 			"automerge": true
-		}
-	],
-	"customManagers": [
-		{
-			"customType": "regex",
-			"fileMatch": [
-				"^Dockerfile$"
-			],
-			"matchStrings": [
-				"#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sARG .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-			],
-			"versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
 		}
 	],
 	"ignorePaths": [
