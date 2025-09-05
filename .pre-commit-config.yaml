@@ -31,7 +31,7 @@ repos:
           - "-i"
           - "CHANGELOG.md"
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 41.88.2
+    rev: 41.90.0
     hooks:
       - id: renovate-config-validator
   - repo: https://github.com/google/yamlfmt.git
