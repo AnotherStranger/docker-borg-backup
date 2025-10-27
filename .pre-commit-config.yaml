@@ -31,14 +31,14 @@ repos:
           - "-i"
           - "CHANGELOG.md"
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 41.138.5
+    rev: 41.155.2
     hooks:
       - id: renovate-config-validator
   - repo: https://github.com/google/yamlfmt.git
-    rev: v0.17.2
+    rev: v0.19.0
     hooks:
       - id: yamlfmt
   - repo: https://github.com/biomejs/pre-commit
-    rev: v2.2.5
+    rev: v2.2.6
     hooks:
       - id: biome-format
