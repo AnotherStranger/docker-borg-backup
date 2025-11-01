@@ -2,7 +2,7 @@
 #                             PIN PACKAGE VERSIONS                             #
 ################################################################################
 # renovate: datasource=repology depName=pypi/borgbackup versioning=python
-ARG BORGBACKUP_VERSION="1.4.1"
+ARG BORGBACKUP_VERSION="1.4.2"
 
 # renovate: datasource=repology depName=alpine_3_22/openssh-server versioning=loose
 ARG OPENSSH_VERSION="10.0_p1-r9"
