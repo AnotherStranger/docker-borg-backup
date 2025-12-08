@@ -1,6 +1,6 @@
 # docker-borg-backup
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A dockerized Borg Backup server. For more information about Borg Backup, an
@@ -167,6 +167,7 @@ This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ph3n1x"><img src="https://avatars.githubusercontent.com/u/8397249?v=4?s=100" width="100px;" alt="Ph3n1x"/><br /><sub><b>Ph3n1x</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=Ph3n1x" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nj"><img src="https://avatars.githubusercontent.com/u/317552?v=4?s=100" width="100px;" alt="Nikolaj Jørgensen"/><br /><sub><b>Nikolaj Jørgensen</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=nj" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.mistergoodcat.com"><img src="https://avatars.githubusercontent.com/u/7507932?v=4?s=100" width="100px;" alt="Peter Kuhn"/><br /><sub><b>Peter Kuhn</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=MisterGoodcat" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/bentolor"><img src="https://avatars.githubusercontent.com/u/588260?v=4?s=100" width="100px;" alt="Benjamin Schmid"/><br /><sub><b>Benjamin Schmid</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=bentolor" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
