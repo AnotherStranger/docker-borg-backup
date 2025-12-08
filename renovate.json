@@ -10,7 +10,7 @@
 		":configMigration",
 		"customManagers:dockerfileVersions"
 	],
-	"baseBranchPatterns": ["dev"],
+	"baseBranchPatterns": ["dev", "next"],
 	"packageRules": [
 		{
 			"matchDatasources": ["docker"],
