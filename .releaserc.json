@@ -2,8 +2,8 @@
 	"branches": [
 		{
 			"name": "next",
-			"channel": "beta",
-			"prerelease": "beta"
+			"channel": "borg2",
+			"prerelease": "borg2"
 		},
 		"main",
 		{
