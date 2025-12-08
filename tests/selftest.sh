@@ -20,10 +20,10 @@ export BORG_PASSPHRASE="test"
 borg version
 
 # Initialize a BorgBackup repository
-borg init --encryption repokey
+borg repo-create --encryption=repokey-aes-ocb
 
 # Check that the repository was created successfully
-borg list
+borg repo-list
 
 # backup single file and try to restore it.
 echo "Hello, World!" > testfile.txt
