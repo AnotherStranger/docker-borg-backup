@@ -5,6 +5,7 @@ concurrency:
 on:
   push:
     branches:
+      - next
       - main
       - dev
 jobs:

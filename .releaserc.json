@@ -1,6 +1,10 @@
 {
 	"branches": [
-		"next",
+		{
+			"name": "next",
+			"channel": "beta",
+			"prerelease": "beta"
+		},
 		"main",
 		{
 			"name": "dev",
