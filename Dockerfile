@@ -2,7 +2,7 @@
 #                             PIN PACKAGE VERSIONS                             #
 ################################################################################
 # renovate: datasource=repology depName=pypi/borgbackup versioning=python
-ARG BORGBACKUP_VERSION="1.4.2"
+ARG BORGBACKUP_VERSION="2.0.0b19"
 
 # renovate: datasource=repology depName=alpine_3_22/openssh-server versioning=loose
 ARG OPENSSH_VERSION="10.0_p1-r10"
@@ -59,17 +59,17 @@ ARG LINUX_HEADERS_VERSION
 ARG BUILD_BASE_VERSION
 
 RUN set -x && \
-	apk add --no-cache \
-	pkgconf="${PKG_CONF_VERSION}" \
-	openssl-dev="${OPENSSL_VERSION}" \
-	build-base="${BUILD_BASE_VERSION}" \
-	acl-dev="${ACL_VERSION}" \
-	zstd-dev="${ZSTD_VERSION}" \
-	lz4-dev="${LZ4_VERSION}" \
-	xxhash-dev="${XXHASH_VERSION}" \
-	linux-headers="${LINUX_HEADERS_VERSION}" \
-	&& mkdir /wheel \
-	&& pip wheel borgbackup=="${BORGBACKUP_VERSION}" -w /wheel
+  apk add --no-cache \
+  pkgconf="${PKG_CONF_VERSION}" \
+  openssl-dev="${OPENSSL_VERSION}" \
+  build-base="${BUILD_BASE_VERSION}" \
+  acl-dev="${ACL_VERSION}" \
+  zstd-dev="${ZSTD_VERSION}" \
+  lz4-dev="${LZ4_VERSION}" \
+  xxhash-dev="${XXHASH_VERSION}" \
+  linux-headers="${LINUX_HEADERS_VERSION}" \
+  && mkdir /wheel \
+  && pip wheel borgbackup=="${BORGBACKUP_VERSION}" -w /wheel
 
 
 ################################################################################
@@ -104,38 +104,38 @@ ENV BORG_GID=""
 ENV ENSURE_BACKUP_PERMISSIONS=true
 
 RUN set -x && \
-	apk add --no-cache \
-	openssh-server="${OPENSSH_VERSION}" \
-	sed="${SED_VERSION}" \
-	bash="${BASH_VERSION}" \
-	shadow="${SHADOW_VERSION}" \
-	openssl="${OPENSSL_VERSION}" \
-	xxhash="${XXHASH_VERSION}" xxhash-dev="${XXHASH_VERSION}" \
-	acl="${ACL_VERSION}" acl-dev="${ACL_VERSION}" \
-	zstd="${ZSTD_VERSION}" zstd-dev="${ZSTD_VERSION}" \
-	lz4="${LZ4_VERSION}" lz4-dev="${LZ4_VERSION}" \
-	linux-headers="${LINUX_HEADERS_VERSION}" \
-	&& adduser -D -u 500 borg borg \
-	&& mkdir -p /var/run/sshd /var/backups/borg /var/lib/docker-borg/ssh \
-	&& mkdir /home/borg/.ssh \
-	&& chown borg:borg /home/borg/.ssh \
-	&& chmod 700 /home/borg/.ssh
+  apk add --no-cache \
+  openssh-server="${OPENSSH_VERSION}" \
+  sed="${SED_VERSION}" \
+  bash="${BASH_VERSION}" \
+  shadow="${SHADOW_VERSION}" \
+  openssl="${OPENSSL_VERSION}" \
+  xxhash="${XXHASH_VERSION}" xxhash-dev="${XXHASH_VERSION}" \
+  acl="${ACL_VERSION}" acl-dev="${ACL_VERSION}" \
+  zstd="${ZSTD_VERSION}" zstd-dev="${ZSTD_VERSION}" \
+  lz4="${LZ4_VERSION}" lz4-dev="${LZ4_VERSION}" \
+  linux-headers="${LINUX_HEADERS_VERSION}" \
+  && adduser -D -u 500 borg borg \
+  && mkdir -p /var/run/sshd /var/backups/borg /var/lib/docker-borg/ssh \
+  && mkdir /home/borg/.ssh \
+  && chown borg:borg /home/borg/.ssh \
+  && chmod 700 /home/borg/.ssh
 
 COPY --from=builder /wheel /wheel
 RUN pip --no-cache-dir install --compile /wheel/*.whl
 
 # Configure SSH
 RUN set -x \
-	&& sed -i \
-	-e 's/^#PasswordAuthentication yes$/PasswordAuthentication no/g' \
-	-e 's/^PermitRootLogin without-password$/PermitRootLogin no/g' \
-	-e 's/^X11Forwarding yes$/X11Forwarding no/g' \
-	-e 's/^#LogLevel .*$/LogLevel ERROR/g' \
-	/etc/ssh/sshd_config \
-	&& echo "ClientAliveInterval 10" >> /etc/ssh/sshd_config \
-	&& echo "ClientAliveCountMax 30" >> /etc/ssh/sshd_config \
-	&& mkdir -p /var/lib/docker-borg/ssh \
-	&& mkdir -p /home/borg/backups
+  && sed -i \
+  -e 's/^#PasswordAuthentication yes$/PasswordAuthentication no/g' \
+  -e 's/^PermitRootLogin without-password$/PermitRootLogin no/g' \
+  -e 's/^X11Forwarding yes$/X11Forwarding no/g' \
+  -e 's/^#LogLevel .*$/LogLevel ERROR/g' \
+  /etc/ssh/sshd_config \
+  && echo "ClientAliveInterval 10" >> /etc/ssh/sshd_config \
+  && echo "ClientAliveCountMax 30" >> /etc/ssh/sshd_config \
+  && mkdir -p /var/lib/docker-borg/ssh \
+  && mkdir -p /home/borg/backups
 
 VOLUME ["/home/borg/backups/", "/var/lib/docker-borg", "/home/borg/.ssh/"]
 
