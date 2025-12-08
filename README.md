@@ -186,6 +186,16 @@ This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
+## Borg V2 Support
+
+borg v2 builds are available on the next branch and are tagged with `3.x.x-borg2.<number>`
+(For example `ghcr.io/anotherstranger/borg-server:3.0.0-borg2.2`).
+
+**Keep in mind that borg2 is not stable yet and not suitable for production use! [See the Issue here](https://github.com/borgbackup/borg/issues/6602)**
+
+Once borg2 goes stable the next branch will replace the current main branch.
+Thanks @bentolor for providing a Dockerfile!
+
 ## License
 
 The files contained in this Git repository are licensed under the following
