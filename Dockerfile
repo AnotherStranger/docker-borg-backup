@@ -37,6 +37,9 @@ ARG ZSTD_VERSION="1.5.7-r0"
 # renovate: datasource=repology depName=alpine_3_22/lz4 versioning=loose
 ARG LZ4_VERSION="1.10.0-r0"
 
+# renovate: datasource=repology depName=alpine_3_22/libffi versioning=loose
+ARG LIBFFI_VERSION="3.4.8-r0"
+
 # renovate: datasource=repology depName=alpine_3_22/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.14.2-r0"
 
@@ -55,6 +58,7 @@ ARG ACL_VERSION
 ARG XXHASH_VERSION
 ARG ZSTD_VERSION
 ARG LZ4_VERSION
+ARG LIBFFI_VERSION
 ARG LINUX_HEADERS_VERSION
 ARG BUILD_BASE_VERSION
 
@@ -67,6 +71,7 @@ RUN set -x && \
   zstd-dev="${ZSTD_VERSION}" \
   lz4-dev="${LZ4_VERSION}" \
   xxhash-dev="${XXHASH_VERSION}" \
+  libffi-dev="${LIBFFI_VERSION}" \
   linux-headers="${LINUX_HEADERS_VERSION}" \
   && mkdir /wheel \
   && pip wheel borgbackup=="${BORGBACKUP_VERSION}" -w /wheel
