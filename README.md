@@ -1,6 +1,6 @@
 # docker-borg-backup
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A dockerized Borg Backup server. For more information about Borg Backup, an
@@ -167,6 +167,7 @@ This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ph3n1x"><img src="https://avatars.githubusercontent.com/u/8397249?v=4?s=100" width="100px;" alt="Ph3n1x"/><br /><sub><b>Ph3n1x</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=Ph3n1x" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nj"><img src="https://avatars.githubusercontent.com/u/317552?v=4?s=100" width="100px;" alt="Nikolaj Jørgensen"/><br /><sub><b>Nikolaj Jørgensen</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=nj" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.mistergoodcat.com"><img src="https://avatars.githubusercontent.com/u/7507932?v=4?s=100" width="100px;" alt="Peter Kuhn"/><br /><sub><b>Peter Kuhn</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=MisterGoodcat" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/bentolor"><img src="https://avatars.githubusercontent.com/u/588260?v=4?s=100" width="100px;" alt="Benjamin Schmid"/><br /><sub><b>Benjamin Schmid</b></sub></a><br /><a href="https://github.com/AnotherStranger/docker-borg-backup/commits?author=bentolor" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
@@ -184,6 +185,16 @@ This image is available for the `linux/386`, `linux/amd64`, `linux/arm/v7`,
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+## Borg V2 Support
+
+borg v2 builds are available on the next branch and are tagged with `3.x.x-borg2.<number>`
+(For example `ghcr.io/anotherstranger/borg-server:3.0.0-borg2.2`).
+
+**Keep in mind that borg2 is not stable yet and not suitable for production use! [See the Issue here](https://github.com/borgbackup/borg/issues/6602)**
+
+Once borg2 goes stable the next branch will replace the current main branch.
+Thanks @bentolor for providing a Dockerfile!
 
 ## License
 
