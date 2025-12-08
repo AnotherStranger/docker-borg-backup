@@ -1,5 +1,6 @@
 {
 	"branches": [
+		"next",
 		"main",
 		{
 			"name": "dev",
