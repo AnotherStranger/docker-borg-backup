@@ -40,7 +40,7 @@ ARG LZ4_VERSION="1.10.0-r0"
 # renovate: datasource=repology depName=alpine_3_22/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.14.2-r0"
 
-FROM python:3.14.0-alpine3.22@sha256:8373231e1e906ddfb457748bfc032c4c06ada8c759b7b62d9c73ec2a3c56e710 AS base
+FROM python:3.14.1-alpine3.23@sha256:b80c82b1a282283bd3e3cd3c6a4c895d56d1385879c8c82fa673e9eb4d6d4aa5 AS base
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
