@@ -25,12 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
       - name: Install cosign
         uses: sigstore/cosign-installer@faadad0cce49287aee09b3a48701e75088a2c6ad # v4.0.0
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@318604b99e75e41977312d83839a89be02ca4893 # v5
+        uses: docker/metadata-action@c299e40c65443455700f0fdfc63efafe5b349051 # v5
         with:
           # list of Docker images to use as base name for tags
           images: |
@@ -49,7 +49,7 @@ jobs:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@c7c53464625b32c7a7e944ae62b3e17d2b600130 # v3
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@e468171a9de216ec08956ac3ada2f0791b6bd435 # v3
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3
       - name: Login to Docker Hub
         uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef # v3
         if: github.event_name != 'pull_request'
@@ -111,7 +111,7 @@ jobs:
           output: "trivy-results.sarif"
           severity: "CRITICAL,HIGH"
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@0499de31b99561a6d14a36a5f662c2a54f91beee # v4
+        uses: github/codeql-action/upload-sarif@5d4e8d1aca955e8d8589aabd499c5cae939e33c7 # v4
         if: ${{ github.event_name != 'pull_request' }}
         with:
           sarif_file: "trivy-results.sarif"
