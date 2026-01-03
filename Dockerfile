@@ -38,7 +38,7 @@ ARG ZSTD_VERSION="1.5.7-r2"
 ARG LZ4_VERSION="1.10.0-r0"
 
 # renovate: datasource=repology depName=alpine_3_23/libffi versioning=loose
-ARG LIBFFI_VERSION="3.4.8-r0"
+ARG LIBFFI_VERSION="3.5.2-r0"
 
 # renovate: datasource=repology depName=alpine_3_23/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.16.12-r0"
