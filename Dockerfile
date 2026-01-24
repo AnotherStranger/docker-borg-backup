@@ -4,43 +4,43 @@
 # renovate: datasource=repology depName=pypi/borgbackup versioning=python
 ARG BORGBACKUP_VERSION="1.4.2"
 
-# renovate: datasource=repology depName=alpine_3_22/openssh-server versioning=loose
-ARG OPENSSH_VERSION="10.0_p1-r10"
+# renovate: datasource=repology depName=alpine_3_23/openssh-server versioning=loose
+ARG OPENSSH_VERSION="10.2_p1-r0"
 
-# renovate: datasource=repology depName=alpine_3_22/sed versioning=loose
+# renovate: datasource=repology depName=alpine_3_23/sed versioning=loose
 ARG SED_VERSION="4.9-r2"
 
-# renovate: datasource=repology depName=alpine_3_22/bash versioning=loose
-ARG BASH_VERSION="5.2.37-r0"
+# renovate: datasource=repology depName=alpine_3_23/bash versioning=loose
+ARG BASH_VERSION="5.3.3-r1"
 
-# renovate: datasource=repology depName=alpine_3_22/shadow versioning=loose
-ARG SHADOW_VERSION="4.17.3-r0"
+# renovate: datasource=repology depName=alpine_3_23/shadow versioning=loose
+ARG SHADOW_VERSION="4.18.0-r0"
 
-# renovate: datasource=repology depName=alpine_3_22/openssl versioning=loose
+# renovate: datasource=repology depName=alpine_3_23/openssl versioning=loose
 ARG OPENSSL_VERSION="3.5.4-r0"
 
-# renovate: datasource=repology depName=alpine_3_22/pkgconf versioning=loose
-ARG PKG_CONF_VERSION="2.4.3-r0"
+# renovate: datasource=repology depName=alpine_3_23/pkgconf versioning=loose
+ARG PKG_CONF_VERSION="2.5.1-r0"
 
-# renovate: datasource=repology depName=alpine_3_22/build-base versioning=loose
+# renovate: datasource=repology depName=alpine_3_23/build-base versioning=loose
 ARG BUILD_BASE_VERSION="0.5-r3"
 
-# renovate: datasource=repology depName=alpine_3_22/acl-dev versioning=loose
+# renovate: datasource=repology depName=alpine_3_23/acl-dev versioning=loose
 ARG ACL_VERSION="2.3.2-r1"
 
-# renovate: datasource=repology depName=alpine_3_22/xxhash-dev versioning=loose
+# renovate: datasource=repology depName=alpine_3_23/xxhash-dev versioning=loose
 ARG XXHASH_VERSION="0.8.3-r0"
 
-# renovate: datasource=repology depName=alpine_3_22/zstd versioning=loose
-ARG ZSTD_VERSION="1.5.7-r0"
+# renovate: datasource=repology depName=alpine_3_23/zstd versioning=loose
+ARG ZSTD_VERSION="1.5.7-r2"
 
-# renovate: datasource=repology depName=alpine_3_22/lz4 versioning=loose
+# renovate: datasource=repology depName=alpine_3_23/lz4 versioning=loose
 ARG LZ4_VERSION="1.10.0-r0"
 
-# renovate: datasource=repology depName=alpine_3_22/linux-headers versioning=loose
-ARG LINUX_HEADERS_VERSION="6.14.2-r0"
+# renovate: datasource=repology depName=alpine_3_23/linux-headers versioning=loose
+ARG LINUX_HEADERS_VERSION="6.16.12-r0"
 
-FROM python:3.14.0-alpine3.22@sha256:8373231e1e906ddfb457748bfc032c4c06ada8c759b7b62d9c73ec2a3c56e710 AS base
+FROM python:3.14.2-alpine3.23@sha256:7af51ebeb83610fb69d633d5c61a2efb87efa4caf66b59862d624bb6ef788345 AS base
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
