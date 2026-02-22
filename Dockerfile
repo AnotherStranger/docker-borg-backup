@@ -43,7 +43,7 @@ ARG LIBFFI_VERSION="3.5.2-r0"
 # renovate: datasource=repology depName=alpine_3_23/linux-headers versioning=loose
 ARG LINUX_HEADERS_VERSION="6.16.12-r0"
 
-FROM python:3.14.2-alpine3.23@sha256:7af51ebeb83610fb69d633d5c61a2efb87efa4caf66b59862d624bb6ef788345 AS base
+FROM python:3.14.3-alpine3.23@sha256:faee120f7885a06fcc9677922331391fa690d911c020abb9e8025ff3d908e510 AS base
 
 ################################################################################
 #                    BUILD BORGBACKUP FROM SOURCE USING PIP                    #
