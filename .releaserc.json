@@ -6,6 +6,7 @@
 		{
 			"name": "next",
 			"channel": "channel-next"
+		},
 		{
 			"name": "dev",
 			"channel": "dev",
