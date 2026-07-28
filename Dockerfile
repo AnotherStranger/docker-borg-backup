@@ -5,16 +5,16 @@
 ARG BORGBACKUP_VERSION="1.4.3"
 
 # renovate: datasource=repology depName=alpine_3_24/openssh-server versioning=loose
-ARG OPENSSH_VERSION="10.2_p1-r0"
+ARG OPENSSH_VERSION="10.3_p1-r0"
 
 # renovate: datasource=repology depName=alpine_3_24/sed versioning=loose
 ARG SED_VERSION="4.9-r2"
 
 # renovate: datasource=repology depName=alpine_3_24/bash versioning=loose
-ARG BASH_VERSION="5.3.3-r1"
+ARG BASH_VERSION="5.3.9-r1"
 
 # renovate: datasource=repology depName=alpine_3_24/shadow versioning=loose
-ARG SHADOW_VERSION="4.18.0-r0"
+ARG SHADOW_VERSION="4.18.0-r1"
 
 # renovate: datasource=repology depName=alpine_3_24/openssl versioning=loose
 ARG OPENSSL_VERSION="3.5.7-r0"
