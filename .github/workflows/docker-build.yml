@@ -42,13 +42,11 @@ jobs:
         uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4
       - name: Login to Docker Hub
         uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4
-        if: github.ref_type == 'tag'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login to GitHub Container Registry
         uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4
-        if: github.ref_type == 'tag'
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -86,7 +84,6 @@ jobs:
             images+="${tag}@${DIGEST} "
           done
           cosign sign --yes --key env://COSIGN_PRIVATE_KEY ${images}
-        if: github.ref_type == 'tag'
         env:
           DIGEST: ${{ steps.docker-build.outputs.digest }}
           TAGS: ${{ steps.meta.outputs.tags }}
@@ -94,7 +91,6 @@ jobs:
           COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@c07df6fec6fa692e6fd1200d50aaa1fdd66f03c8 # master
-        if: github.ref_type == 'tag'
         with:
           image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}"
           format: 'sarif'
@@ -102,6 +98,5 @@ jobs:
           severity: "CRITICAL,HIGH"
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81 # v4
-        if: github.ref_type == 'tag'
         with:
           sarif_file: "trivy-results.sarif"
