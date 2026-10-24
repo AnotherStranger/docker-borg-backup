@@ -3,8 +3,6 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 on:
-  schedule:
-    - cron: "0 10 * * *"
   create:
     tags:
       - "v*.*.*"
@@ -13,11 +11,8 @@ on:
       - "**"
     tags:
       - "v*.*.*"
-  release:
-    types: [published]
+  merge_group:
   pull_request:
-    branches:
-      - "main"
 env:
   TEST_TAG: horaceworblehat/borg-server:test
 jobs:
