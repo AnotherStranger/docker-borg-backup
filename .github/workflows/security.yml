@@ -5,6 +5,7 @@ on:
       - main
       - dev
   pull_request:
+  merge_group:
   schedule:
     - cron: '* * * * 0' # run weekly
 permissions:
