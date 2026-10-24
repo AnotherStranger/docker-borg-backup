@@ -1,23 +1,13 @@
 name: docker-build
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-${{ github.head_ref || github.ref_name }}
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 on:
-  schedule:
-    - cron: "0 10 * * *"
-  create:
-    tags:
-      - "v*.*.*"
   push:
-    branches:
-      - "**"
     tags:
       - "v*.*.*"
-  release:
-    types: [published]
+  merge_group:
   pull_request:
-    branches:
-      - "main"
 env:
   TEST_TAG: horaceworblehat/borg-server:test
 jobs:
@@ -36,6 +26,8 @@ jobs:
           images: |
             horaceworblehat/borg-server
             ghcr.io/AnotherStranger/borg-server
+          flavor: |
+            latest=auto
           # generate Docker tags based on the following events/attributes
           tags: |
             type=ref,event=branch
@@ -44,20 +36,19 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
             type=sha,format=long
-            type=raw,value=latest,enable={{is_default_branch}}
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@96fe6ef7f33517b61c61be40b68a1882f3264fb8 # v4
+        uses: docker/setup-qemu-action@99012661954931238ded8c8b007157a8430204e1 # v4
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@bb05f3f5519dd87d3ba754cc423b652a5edd6d2c # v4
+        uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4
       - name: Login to Docker Hub
         uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4
-        if: github.event_name != 'pull_request'
+        if: github.ref_type == 'tag'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Login to GitHub Container Registry
         uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4
-        if: github.event_name != 'pull_request'
+        if: github.ref_type == 'tag'
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -65,7 +56,7 @@ jobs:
       - name: Get Git commit timestamps
         run: echo "TIMESTAMP=$(git log -1 --pretty=%ct)" >> $GITHUB_ENV
       - name: Build Testimage
-        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7
         env:
           SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
         with:
@@ -76,16 +67,16 @@ jobs:
       - name: Run small selftest on build container image
         run: docker run -v "./tests/selftest.sh:/selftest.sh" "${{ env.TEST_TAG }}" ./selftest.sh
       - name: Build and push
-        uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7
         id: docker-build
         env:
           SOURCE_DATE_EPOCH: ${{ env.TIMESTAMP }}
         with:
           context: .
-          push: ${{ github.event_name != 'pull_request' }}
+          push: ${{ github.ref_type == 'tag' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          platforms: linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8,linux/ppc64le,linux/s390x
+          platforms: linux/386,linux/amd64,linux/arm/v7,linux/arm64/v8
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Sign image with a key
@@ -95,15 +86,15 @@ jobs:
             images+="${tag}@${DIGEST} "
           done
           cosign sign --yes --key env://COSIGN_PRIVATE_KEY ${images}
-        if: ${{ github.event_name != 'pull_request' }}
+        if: github.ref_type == 'tag'
         env:
           DIGEST: ${{ steps.docker-build.outputs.digest }}
           TAGS: ${{ steps.meta.outputs.tags }}
           COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}
           COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@d2a0b60797ff03db6132bd4e2b293f9b37081297 # master
-        if: ${{ github.event_name != 'pull_request' }}
+        uses: aquasecurity/trivy-action@c07df6fec6fa692e6fd1200d50aaa1fdd66f03c8 # master
+        if: github.ref_type == 'tag'
         with:
           image-ref: "ghcr.io/anotherstranger/borg-server:sha-${{ github.sha }}"
           format: 'sarif'
@@ -111,6 +102,6 @@ jobs:
           severity: "CRITICAL,HIGH"
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81 # v4
-        if: ${{ github.event_name != 'pull_request' }}
+        if: github.ref_type == 'tag'
         with:
           sarif_file: "trivy-results.sarif"
